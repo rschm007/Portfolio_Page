@@ -6,26 +6,35 @@
     <title>Robert Schmahl</title>
     <!-- styles CSS -->
     <link href="./assets/styles/output.css" type="text/css" rel="stylesheet" />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- local JS -->
+    <script src="./assets/script.js"></script>
 </head>
 <body>
     <!-- main site wrapper -->
     <div class="grid grid-cols-9 gap-0">
-        <!-- sidebar that holds navigation & about me -->
-        <div class="col-span-3 bg-gray-300 h-screen shadow-md">
+        <!-- main display at beginning. gets changed to sidebar -->
+        <div class="col-span-9 grid grid-rows-3 grid-flow-col bg-gray-300 h-screen shadow-md">
+            <div></div>
             <header class="text-center mt-10">
-                <h1 class="font-normal text-xl">Robert Schmahl</h1>
-                <h2 class="font-light text-base">Web Developer, Graphic Designer</h2>
+                <!-- typewriter here -->
+                <h1>
+                    <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Robert.", "I am a full-stack web developer.", "I am a graphic designer.", "I love to create."]'>
+                        <span class="wrap"></span>
+                    </a>
+                </h1>
             </header>
+            <div></div>
             <!-- about me & img. img wil always be sourced from linkedin -->
-            <img src="./assets/imgs/robert-1.jpg" class="transform scale-75 rounded-full  mx-auto my-auto shadow-lg" alt="An image of Robert Schmahl">
+            <!-- <img src="./assets/imgs/robert-1.jpg" class="transform scale-75 rounded-full  mx-auto my-auto shadow-lg" alt="An image of Robert Schmahl"> -->
             <!-- navigation links -->
-            <nav class="text-center mt-3">
-                <a><h3 class="font-normal text-base my-2  focus:outline-none focus:shadow-outline transition transform ease-in-out duration-300 hover:scale-110 cursor-pointer">About Me</h3></a>
-                <a><h3 class="font-normal text-base my-2  focus:outline-none focus:shadow-outline transition transform ease-in-out duration-300 hover:scale-110 cursor-pointer">Résumé</h3></a>
-                <a><h3 class="font-normal text-base my-2  focus:outline-none focus:shadow-outline transition transform ease-in-out duration-300 hover:scale-110 cursor-pointer">My Work</h3></a>
-            </nav>
+            <!-- <nav class="text-center mt-3">
+                <a><h3 id="aboutMe" class="nav font-normal text-base my-2 focus:outline-none focus:shadow-outline transition transform ease-in-out duration-300 hover:scale-110 cursor-pointer">About Me</h3></a>
+                <a><h3 id="myWork" class="nav font-normal text-base my-2 focus:outline-none focus:shadow-outline transition transform ease-in-out duration-300 hover:scale-110 cursor-pointer">My Work</h3></a>
+            </nav> -->
             <!-- social media icons -->
-            <div class="grid grid-cols-4 gap-0 mt-10 mx-auto">
+            <!-- <div class="grid grid-cols-4 gap-0 mt-10 mx-auto">
                 <div class="col-span-1"></div>
                     <form action ="https://github.com/rschm007" method="GET" class="object-none object-center col-span-1 focus:outline-none focus:shadow-outline transition transform ease-in-out duration-300 hover:-translate-y-1 hover:scale-110">
                         <input type="image" src="./assets/imgs/github.png" class="col-span-1 mx-2 pl-3 " alt="GitHub icon">
@@ -35,8 +44,27 @@
                     </form>
                 </a>
                 <div class="col-span-1"></div>
-            </div>
+            </div> -->
         </div>
+        <!-- 1 of 2 portfolio columns -->
+            <!-- content 1 -->
+            <div class="col-span-3 invisible">
+                <form action ="" method="GET" class="col-span-1 focus:outline-none focus:shadow-outline transition transform ease-in-out duration-300 hover:-translate-y-1 hover:scale-110 rounded-lg h-full w-full my-0 mt-0">
+                    <input type="image" src="./assets/imgs/webdevo_gif1.gif" class="col-span-1 mx-2 pl-3 object-scale-down h-full w-full" alt="A poster for Fireflies">
+                </form>
+                <form action ="" method="GET" class="col-span-1 focus:outline-none focus:shadow-outline transition transform ease-in-out duration-300 hover:-translate-y-1 hover:scale-110 rounded-lg h-full w-full my-0 mt-0">
+                    <input type="image" src="./assets/imgs/4c-aubergine.jpg" class="col-span-1 mx-2 pl-3 object-scale-down h-full w-full" alt="A poster for Fireflies">
+                </form>
+            </div>
+            <!-- content 2 -->
+            <div class="col-span-3 invisible">
+                <form action ="" method="GET" class="col-span-1 focus:outline-none focus:shadow-outline transition transform ease-in-out duration-300 hover:-translate-y-1 hover:scale-110 rounded-lg h-full w-full my-0 mt-0">
+                    <input type="image" src="./assets/imgs/Fireflies.jpg" class="col-span-1 mx-2 pl-3 object-scale-down h-full w-full" alt="A poster for Fireflies">
+                </form>
+                <form action ="" method="GET" class="col-span-1 focus:outline-none focus:shadow-outline transition transform ease-in-out duration-300 hover:-translate-y-1 hover:scale-110 rounded-lg h-full w-full my-0 mt-0">
+                    <input type="image" src="./assets/imgs/resume.jfif" class="col-span-1 mx-2 pl-3 object-scale-down h-full w-full" alt="A poster for Fireflies">
+                </form>
+            </div>
     </div>
 </body>
 </html>
