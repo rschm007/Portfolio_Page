@@ -19,7 +19,7 @@ $(document).ready(function () {
                 var current_element = $(settings.selector[index]);
                 var final_text = current_element.text();
                 if (settings.trim) final_text = $.trim(final_text);
-                current_element.html("").show();
+                current_element.html("").addClass("visible").removeClass("invisible");
     
                 function type_next_character(element, i) {
                     element.html( final_text.substr(0, i)+settings.extra_char );
