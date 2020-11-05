@@ -6,7 +6,7 @@ $(document).ready(function () {
             var settings = {
                 'selector': this,
                 'extra_char': '',
-                'delay':    100,
+                'delay':    70,
                 'trim':     false,
                 'callback': true
             };
@@ -19,6 +19,7 @@ $(document).ready(function () {
                 var current_element = $(settings.selector[index]);
                 var final_text = current_element.text();
                 if (settings.trim) final_text = $.trim(final_text);
+                // reveal letters as they are typed
                 current_element.html("").addClass("visible").removeClass("invisible");
     
                 function type_next_character(element, i) {
@@ -40,16 +41,16 @@ $(document).ready(function () {
             type_next_element(0);
             return this;
         };
+        // bold certain text that appears
+        $("div:contains('Robert')").css("font-weight", "bold");
+
     })(jQuery);
-    
-    // bold text that results from typewriter function
-    $("Robert Schmahl").css("font-weight", "bold");
     
     // calling typewriter callback
     $(".typewriter").typewrite({
         // on callback, insert button under text
         'callback': function(){
-            $()
+            $(".introduction").append(`<button class="animate-bounce bg-indigo-500 border border-indigo-800 text-base text-white font-normal mt-9 py-2 px-4 rounded shadow-lg workBtn transition duration-200 ease-in-out hover:bg-indigo-800">See My Work</button>`)
         }
     })
 
