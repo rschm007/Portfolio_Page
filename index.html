@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robert Schmahl</title>
+    <!-- font awesome library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+</head>
+<body>
+    <!-- main site wrapper -->
+    <header class="grid grid-cols-9 gap-0">
+        <!-- main display at beginning. gets changed to sidebar -->
+        <div class="col-span-9 grid grid-rows-3 grid-flow-col bg-gray-300 w-screen h-screen shadow-md">
+            <div></div>
+            <div class="text-center text-4xl mt-10 introduction">
+                <!-- typewriter here -->
+                <div class="font-light typewriter invisible triangle left" style="display: block">Hi, my name is <div class="font-normal">Robert.</div></div>
+                <div class="font-light typewriter invisible triangle right" style="display: block">I am a full-stack web developer and graphic designer.</div>
+            </div>
+    </header>
+
+<!-- scripts -->
     <!-- styles CSS -->
     <link href="./assets/styles/output.css" type="text/css" rel="stylesheet" />
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- local JS -->
     <script src="./assets/script.js"></script>
-</head>
-<body>
-    <!-- main site wrapper -->
-    <div class="grid grid-cols-9 gap-0">
-        <!-- main display at beginning. gets changed to sidebar -->
-        <div class="col-span-9 grid grid-rows-3 grid-flow-col bg-gray-300 h-screen shadow-md">
-            <div></div>
-            <header class="text-center text-4xl mt-10 introduction">
-                <!-- typewriter here -->
-                <div class="font-light typewriter invisible" style="display: block">Hi, my name is <div class="font-normal">Robert.</div></div>
-                <div class="font-light typewriter invisible" style="display: block">I am a full-stack web developer and graphic designer.</div>
-            </header>
-    </div>
 </body>
 </html>
