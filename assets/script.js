@@ -54,7 +54,6 @@ $(document).ready(function () {
 
   // on button click, render page transition
   $(document).on("click", ".btn", function () {
-    console.log("Button was clicked");
     $loader.addClass("loader--active").addClass("visible").removeClass("invisible");
 
     window.setTimeout(function () {
