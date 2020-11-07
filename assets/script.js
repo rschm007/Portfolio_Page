@@ -1,4 +1,18 @@
 $(document).ready(function () {
+  // defining var to hold the loader div
+  let $loader = $(".loader");
+
+  // removing the loader from the visible DOM
+  $loader.removeClass("loader--active");
+
+  document.querySelector(".btn").addEventListener("click", function () {
+    $loader.addClass("loader--active");
+
+    window.setTimeout(function () {
+      $loader.classList.remove("loader--active");
+    }, 5000);
+  });
+
   // defining typewrite function
   (function ($) {
     $.fn.typewrite = function (options) {
@@ -46,7 +60,9 @@ $(document).ready(function () {
   $(".typewriter").typewrite({
     // on callback, insert button under text
     callback: function () {
-      $(".introduction").append(`<i class="fas fa-chevron-circle-down animate-bounce m-10 h-12 w-12"></i>`);
+      $(".introduction").append(
+        `<i class="fas fa-chevron-circle-down fa-lg animate-bounce m-10" alt="A chevron arrow icon"></i>`
+      );
     },
   });
 });
