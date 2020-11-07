@@ -48,12 +48,12 @@ $(document).ready(function () {
     // on callback, insert button under text
     callback: function () {
       $(".introduction").append(
-        `<button class="btn bg-transparent border-2 border-white rounded-lg p-2 text-white font-medium animate-pulse" type="button">See My Work</button>`);
+        `<button class="btnWork bg-transparent border-2 border-white rounded-lg p-2 text-white font-medium" type="button">See My Work</button>`);
     },
   });
 
   // on button click, render page transition
-  $(document).on("click", ".btn", function () {
+  $(document).on("click", ".btnWork", function () {
     $loader.addClass("loader--active").addClass("visible").removeClass("invisible");
 
     window.setTimeout(function () {
