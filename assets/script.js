@@ -8,7 +8,7 @@ $(document).ready(function () {
       var settings = {
         selector: this,
         extra_char: "",
-        delay: 70,
+        delay: 55,
         trim: false,
         callback: true,
       };
@@ -48,7 +48,7 @@ $(document).ready(function () {
     // on callback, insert button under text
     callback: function () {
       $(".introduction").append(
-        `<button class="btnWork bg-transparent border-2 border-white rounded-lg p-2 text-white font-medium" type="button">See My Work</button>`);
+        `<button class="btnWork" type="button">See My Work</button>`);
     },
   });
 
