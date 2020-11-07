@@ -5,14 +5,6 @@ $(document).ready(function () {
   // removing the loader from the visible DOM
   $loader.removeClass("loader--active");
 
-  document.querySelector(".btn").addEventListener("click", function () {
-    $loader.addClass("loader--active");
-
-    window.setTimeout(function () {
-      $loader.classList.remove("loader--active");
-    }, 5000);
-  });
-
   // defining typewrite function
   (function ($) {
     $.fn.typewrite = function (options) {
@@ -52,8 +44,6 @@ $(document).ready(function () {
       type_next_element(0);
       return this;
     };
-    // bold certain text that appears
-    $("div:contains('Robert')").css("font-weight", "bold");
   })(jQuery);
 
   // calling typewriter callback
@@ -61,8 +51,18 @@ $(document).ready(function () {
     // on callback, insert button under text
     callback: function () {
       $(".introduction").append(
-        `<i class="fas fa-chevron-circle-down fa-lg animate-bounce m-10" alt="A chevron arrow icon"></i>`
-      );
+        `<button class="btn bg-transparent border-2 border-white rounded-lg p-2 text-white font-medium animate-pulse" type="button">See My Work</button>`);
     },
   });
+
+  // on button click, transition to next page
+  $(".btn").on("click", function () {
+    $loader.addClass("loader--active").addClass("visible").removeClass("invisible");
+
+    window.setTimeout(function () {
+      $loader.removeClass("loader--active");
+    }, 5000);
+  });
+
+
 });

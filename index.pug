@@ -15,7 +15,7 @@ html(lang='en')
         script(src='../assets/script.js')
 
     body
-      .loader.loader--active
+      .loader.loader--active.invisible
         .loader__icon
           svg#loader-1(
             version="1.1",
@@ -55,7 +55,5 @@ html(lang='en')
       main.wrapper(class="grid grid-rows-3 grid-flow-col bg-gradient-to-b from-indigo-900 via-blue-800 to-blue-600 h-screen w-screen")
         .grid-cols-1
         header.introduction.grid-cols-1(class="text-white text-2xl")
-          h1.font-medium Hi, my name is Robert.
-          h1.font-normal I am a full-stack web developer and digital graphic designer.
-          button(class="btn bg-transparent border-2 border-white rounded-lg p-2 text-white font-medium animate-pulse invisible" type="button") See My Work
-          .grid-cols-1
+          h1.typewriter(class="font-medium invisible") Hi, my name is Robert.
+          h1.typewriter(class="font-normal invisible") I am a full-stack web developer and digital graphic designer.
