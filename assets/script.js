@@ -2,9 +2,6 @@ $(document).ready(function () {
   // defining var to hold the loader div
   let $loader = $(".loader");
 
-  // removing the loader from the visible DOM
-  $loader.removeClass("loader--active");
-
   // defining typewrite function
   (function ($) {
     $.fn.typewrite = function (options) {
@@ -55,8 +52,9 @@ $(document).ready(function () {
     },
   });
 
-  // on button click, transition to next page
-  $(".btn").on("click", function () {
+  // on button click, render page transition
+  $(document).on("click", ".btn", function () {
+    console.log("Button was clicked");
     $loader.addClass("loader--active").addClass("visible").removeClass("invisible");
 
     window.setTimeout(function () {
