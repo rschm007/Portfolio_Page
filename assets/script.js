@@ -1,6 +1,4 @@
 $(document).ready(function () {
-  // defining var to hold the loader div
-  let $loader = $(".loader");
 
   // defining typewrite function
   (function ($) {
@@ -48,18 +46,8 @@ $(document).ready(function () {
     // on callback, insert button under text
     callback: function () {
       $(".introduction").append(
-        `<button class="btnWork" type="button">See My Work</button>`);
+        `<button class="btnWork font-xl" type="button">See My Work</button>`);
     },
   });
-
-  // on button click, render page transition
-  $(document).on("click", ".btnWork", function () {
-    $loader.addClass("loader--active").addClass("visible").removeClass("invisible");
-
-    window.setTimeout(function () {
-      $loader.removeClass("loader--active");
-    }, 5000);
-  });
-
 
 });
