@@ -15,8 +15,10 @@ html(lang='en')
         script(src='../assets/script.js')
 
     body
-      main.wrapper(class="grid grid-rows-3 grid-flow-col bg-gradient-to-br from-indigo-900 via-blue-800 to-blue-600 h-screen w-screen")
-        .grid-cols-1
-        header.introduction.grid-cols-1(class="text-white")
-          h1.typewriter(class="font-medium text-4xl invisible") Hi, my name is Robert.
-          h1.typewriter(class="font-normal text-3xl mt-10 invisible") I am a full-stack web developer and graphic designer.
+
+      main.wrapper(class="bg-gradient-to-br from-indigo-900 via-blue-800 to-blue-600 h-screen w-screen")
+        header.introduction(class="grid grid-rows-6 grid-flow-col justify-center text-center gap-10 text-white")
+          .row-span-3
+          h1.typewriter(class="row-span-1 font-medium text-4xl invisible") Hi, my name is Robert.
+          h1.typewriter(class="row-span-1 font-normal text-3xl invisible") I am a full-stack web developer and graphic designer.
+          nav(class="row-span-1")

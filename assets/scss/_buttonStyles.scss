@@ -33,15 +33,15 @@ $lighter: lighten($color2, 10%);
 }
 
 // Button specific styles
-.btnWork {
-    background: rgba(black, .1);
+.btn_nav {
+    background: #151e3d;
     box-shadow: 0px 0px 0px 5px rgba(white ,0.95);
     border: 0.5px solid white;
     transition: .3s all ease-in-out;
     padding: 1% 2%;
     
     &:hover {
-        background: rgba(black, 0.2);
+        background: #59788e;
         box-shadow: 0px 0px 10px 5px rgba(255,255,255,0.85);
     }
 }
