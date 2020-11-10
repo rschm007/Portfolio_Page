@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   // defining typewrite function
   (function ($) {
     $.fn.typewrite = function (options) {
@@ -46,13 +45,29 @@ $(document).ready(function () {
     // on callback, insert button under text
     callback: function () {
       $("nav").append(
-        `<button class="btn_nav projectsLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Projects</button>
-        <button class="btn_nav skillsLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Skills</button>
-        <button class="btn_nav homeLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Home</button>
-        <button class="btn_nav aboutLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">About</button>
-        <button class="btn_nav contactLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Contact</button>
-        `);
+        `<button class="btn_nav fadeIn projectsLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Projects</button>
+        <button class="btn_nav fadeIn skillsLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Skills</button>
+        <button class="btn_nav fadeIn homeLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Home</button>
+        <button class="btn_nav fadeIn aboutLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">About</button>
+        <button class="btn_nav fadeIn contactLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Contact</button>
+        `
+      );
     },
   });
 
+  // add animation function
+  $(document).on("click", ".btn_nav", function () {
+    // animate content
+    $(".page_style").addClass("animate_content");
+    $(".page_description").fadeOut(100).delay(2800).fadeIn();
+
+    setTimeout(function () {
+      $(".page__style").removeClass("animate_content");
+    }, 3200);
+
+    //remove fadeIn class after 1500ms
+    setTimeout(function () {
+      $(".page__style").removeClass("fadeIn");
+    }, 1500);
+  });
 });
