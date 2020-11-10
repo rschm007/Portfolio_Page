@@ -82,33 +82,39 @@ $(document).ready(function () {
           .addClass("from-green-900 via-green-600 to-teal-600")
           .removeClass(" from-indigo-900 via-blue-800 to-blue-600");
         $("header")
-          .addClass("grid-rows-3 grid-cols-9")
+          .addClass("grid-rows-2 grid-cols-9")
           .removeClass("introduction grid-rows-6 grid-flow-col")
           .empty().append(`
         <div class="row-span-1 col-span-9"></div>
-        <h1 class="row-span-1 col-span-9 font-medium text-4xl">Projects</h1>
         ${nav}
         <div class="col-span-1"></div>
         <div class="grid grid-cols-3 col-span-7 justify-center text-blue-900">
           <div class="project1 col-span-1 bg-gray-100 w-auto h-auto mx-5 rounded-lg">
-            <h2 class="text-2xl font-bold p-2">Babel</h2>
-            <h3 class="font-normal p-2">Generates recipes based off of desired ingredients</h3>
-            <img src="../assets/imgs/webdevo_gif1.gif" href="#" alt="An animated gif of the Recipe Generator web app"></img>
+            <h2 class="text-2xl font-bold mt-4 p-2">Babel</h2>
+            <h3 class="font-normal p-2 mb-4">Generates recipes based off of desired ingredients</h3>
+            <a href="https://https-github-com-steversontong.github.io/Recipe-Generatorf/"><img src="../assets/imgs/webdevo_gif1.gif" alt="An animated gif of the Recipe Generator web app"></img></a>
+            <a href="https://https-github-com-steversontong.github.io/Recipe-Generatorf/"><i class="fas fa-link fa-2x m-2 p-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-120"></i></a>
+            <a href="https://github.com/https-github-com-steversonTong/Recipe-Generatorf"><i class="fab fa-github-square fa-3x m-2 p-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-120"></i></a>
           </div>
           <div class="project2 col-span-1 bg-gray-100 w-auto h-auto mx-5 rounded-lg">
-            <h2 class="text-2xl font-bold p-2">Day Planner</h2>
-            <h3 class="font-normal p-2">Plan your day and track the current time</h3>
-            <img src="../assets/imgs/webdevo_gif1.gif" href="#" alt="An animated gif of the Recipe Generator web app"></img>
+            <h2 class="text-2xl font-bold mt-4 p-2">Day Planner</h2>
+            <h3 class="font-normal p-2 mb-4">Plan your day and track the current time</h3>
+            <a href="https://rschm007.github.io/Day-Planner/"><img src="../assets/imgs/webdevo_gif2.gif" alt="An animated gif of the Day Planner web app"></img></a>
+            <a href="https://rschm007.github.io/Day-Planner/"><i class="fas fa-link fa-2x m-2 p-2 transition duration-500 ease-in-out hover:-translate-y-1 transform hover:scale-120"></i></a>
+            <a href="https://github.com/rschm007/Day-Planner"><i class="fab fa-github-square fa-3x m-2 p-2 transition duration-500 ease-in-out hover:-translate-y-1 transform hover:scale-120"></i></a>
           </div>
           <div class="project3 col-span-1 bg-gray-100 w-auto h-auto mx-5 rounded-lg">
-            <h2 class="text-2xl font-bold p-2">Weather Dashboard</h2>
-            <h3 class="font-normal p-2">Use the OpenWeatherAPI to search weather data</h3>
-            <img src="../assets/imgs/webdevo_gif1.gif" href="#" alt="An animated gif of the Recipe Generator web app"></img>
+            <h2 class="text-2xl font-bold mt-4 p-2">Weather Dashboard</h2>
+            <h3 class="font-normal p-2 mb-4">Use the OpenWeatherAPI to search forecasts</h3>
+            <a href="https://rschm007.github.io/Weather-Dashboard/"><img src="../assets/imgs/webdevo_gif3.gif" alt="An animated gif of the Weather Dashboard web app"></img></a>
+            <a href="https://rschm007.github.io/Weather-Dashboard/"><i class="fas fa-link fa-2x m-2 p-2 transition duration-500 ease-in-out hover:-translate-y-1 transform hover:scale-120"></i></a>
+            <a href="https://github.com/rschm007/Weather-Dashboard"><i class="fab fa-github-square fa-3x m-2 p-2 transition duration-500 ease-in-out hover:-translate-y-1 transform hover:scale-120"></i></a>
           </div>
         </div>
         <div class="col-span-1"></div>
         `);
         $("nav").addClass("col-span-9");
+        $(".projectsLink").addClass("active");
       }, 1600);
     }
   });
