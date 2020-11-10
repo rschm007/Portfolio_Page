@@ -46,11 +46,11 @@ $(document).ready(function () {
     // on callback, insert button under text
     callback: function () {
       $("nav").append(
-        `<button class="btn_nav projectsLink text-xl mx-5 rounded-lg" type="button">Projects</button>
-        <button class="btn_nav skillsLink text-xl mx-5 rounded-lg" type="button">Skills</button>
-        <button class="btn_nav homeLink text-xl mx-5 rounded-lg" type="button">Home</button>
-        <button class="btn_nav aboutLink text-xl mx-5 rounded-lg" type="button">About</button>
-        <button class="btn_nav contactLink text-xl mx-5 rounded-lg" type="button">Contact</button>
+        `<button class="btn_nav projectsLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Projects</button>
+        <button class="btn_nav skillsLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Skills</button>
+        <button class="btn_nav homeLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Home</button>
+        <button class="btn_nav aboutLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">About</button>
+        <button class="btn_nav contactLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Contact</button>
         `);
     },
   });
