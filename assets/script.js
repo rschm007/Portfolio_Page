@@ -8,7 +8,7 @@ $(document).ready(function () {
   <button class="btn_nav fadeIn contactLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Contact</button>
   </nav>
   `;
-  
+
   // defining typewrite function
   (function ($) {
     $.fn.typewrite = function (options) {
@@ -78,15 +78,38 @@ $(document).ready(function () {
     // properties for projects page
     if (btnTxt === "Projects") {
       setTimeout(function () {
-        $("main").addClass("from-green-900 via-green-600 to-teal-600").removeClass(" from-indigo-900 via-blue-800 to-blue-600");
-        $(".introduction").empty().append(`
-        <div class="row-span-3"></div>
-        <h1 class="row-span-1 font-medium text-4xl">
-          Projects
-        </h1>
+        $("main")
+          .addClass("from-green-900 via-green-600 to-teal-600")
+          .removeClass(" from-indigo-900 via-blue-800 to-blue-600");
+        $("header")
+          .addClass("grid-rows-3 grid-cols-9")
+          .removeClass("introduction grid-rows-6 grid-flow-col")
+          .empty().append(`
+        <div class="row-span-1 col-span-9"></div>
+        <h1 class="row-span-1 col-span-9 font-medium text-4xl">Projects</h1>
         ${nav}
+        <div class="col-span-1"></div>
+        <div class="grid grid-cols-3 col-span-7 justify-center text-blue-900">
+          <div class="project1 col-span-1 bg-gray-100 w-auto h-auto mx-5 rounded-lg">
+            <h2 class="text-2xl font-bold p-2">Babel</h2>
+            <h3 class="font-normal p-2">Generates recipes based off of desired ingredients</h3>
+            <img src="../assets/imgs/webdevo_gif1.gif" href="#" alt="An animated gif of the Recipe Generator web app"></img>
+          </div>
+          <div class="project2 col-span-1 bg-gray-100 w-auto h-auto mx-5 rounded-lg">
+            <h2 class="text-2xl font-bold p-2">Day Planner</h2>
+            <h3 class="font-normal p-2">Plan your day and track the current time</h3>
+            <img src="../assets/imgs/webdevo_gif1.gif" href="#" alt="An animated gif of the Recipe Generator web app"></img>
+          </div>
+          <div class="project3 col-span-1 bg-gray-100 w-auto h-auto mx-5 rounded-lg">
+            <h2 class="text-2xl font-bold p-2">Weather Dashboard</h2>
+            <h3 class="font-normal p-2">Use the OpenWeatherAPI to search weather data</h3>
+            <img src="../assets/imgs/webdevo_gif1.gif" href="#" alt="An animated gif of the Recipe Generator web app"></img>
+          </div>
+        </div>
+        <div class="col-span-1"></div>
         `);
+        $("nav").addClass("col-span-9");
       }, 1600);
-    } 
+    }
   });
 });
