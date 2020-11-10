@@ -1,4 +1,14 @@
 $(document).ready(function () {
+  // defining template literals for nav buttons
+  const nav = `<nav class="row-span-1">
+  <button class="btn_nav fadeIn projectsLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Projects</button>
+  <button class="btn_nav fadeIn skillsLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Skills</button>
+  <button class="btn_nav fadeIn homeLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Home</button>
+  <button class="btn_nav fadeIn aboutLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">About</button>
+  <button class="btn_nav fadeIn contactLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Contact</button>
+  </nav>
+  `;
+  
   // defining typewrite function
   (function ($) {
     $.fn.typewrite = function (options) {
@@ -44,19 +54,15 @@ $(document).ready(function () {
   $(".typewriter").typewrite({
     // on callback, insert button under text
     callback: function () {
-      $("nav").append(
-        `<button class="btn_nav fadeIn projectsLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Projects</button>
-        <button class="btn_nav fadeIn skillsLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Skills</button>
-        <button class="btn_nav fadeIn homeLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Home</button>
-        <button class="btn_nav fadeIn aboutLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">About</button>
-        <button class="btn_nav fadeIn contactLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Contact</button>
-        `
-      );
+      $(".introduction").append(nav);
     },
   });
 
   // add animation function
   $(document).on("click", ".btn_nav", function () {
+    // grab the value of the button
+    let btnTxt = $(this).text();
+
     // animate content
     $(".page_style").addClass("animate_content");
     $(".page_description").fadeOut(100).delay(2800).fadeIn();
@@ -69,5 +75,18 @@ $(document).ready(function () {
     setTimeout(function () {
       $(".page__style").removeClass("fadeIn");
     }, 1500);
+    // properties for projects page
+    if (btnTxt === "Projects") {
+      setTimeout(function () {
+        $("main").addClass("from-green-900 via-green-600 to-teal-600").removeClass(" from-indigo-900 via-blue-800 to-blue-600");
+        $(".introduction").empty().append(`
+        <div class="row-span-3"></div>
+        <h1 class="row-span-1 font-medium text-4xl">
+          Projects
+        </h1>
+        ${nav}
+        `);
+      }, 1600);
+    } 
   });
 });
