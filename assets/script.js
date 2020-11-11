@@ -10,7 +10,7 @@ $(document).ready(function () {
   `;
 
   const emailForm = `
-          <form class="col-span-2 w-full p-4 max-w-lg">
+          <form class="w-full p-4 max-w-lg">
           <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
@@ -299,18 +299,21 @@ $(document).ready(function () {
           .addClass("grid-rows-2 grid-cols-9")
           .removeClass("introduction grid-rows-6 grid-flow-col")
           .empty().append(`
-        <div class="row-span-1 col-span-5"></div>
+          <div class="row-span-1 col-span-9"></div>
         ${nav}
-        <div class="col-span-1"></div>
+        <div class="col-span-2"></div>
         <div class="col-span-3 bg-gray-100 justify-center h-auto w-auto rounded-lg shadow-lg">
           ${emailForm}
-          <div class="col-span-1">
-            <a href="https://www.linkedin.com/in/robert-schmahl/">
-              <i class="fab fa-linkedin-in fa-2x" style="color: Tomato;"></i>
-            </a>
-          </div>
         </div>
-        <div class="col-span-1"></div>
+        <div class="col-span-2">
+          <a href="https://www.linkedin.com/in/robert-schmahl/">
+            <i class="fab fa-linkedin fa-7x"></i>
+          </a>
+          <a href="https://github.com/rschm007">
+            <i class="fab fa-github-square fa-7x"></i>
+          </a>
+        </div>
+        <div class="col-span-2"></div>
         `);
         $("nav").addClass("col-span-9");
         $(".btn_nav").removeClass("active");
