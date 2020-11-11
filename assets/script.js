@@ -1,13 +1,57 @@
 $(document).ready(function () {
   // defining template literals for nav buttons
   const nav = `<nav class="row-span-1">
+  <button class="btn_nav fadeIn homeLink text-xl mx-5 px-4 py-3 rounded-lg active" type="button">Home</button>
   <button class="btn_nav fadeIn projectsLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Projects</button>
   <button class="btn_nav fadeIn skillsLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Skills</button>
-  <button class="btn_nav fadeIn homeLink text-xl mx-5 px-4 py-3 rounded-lg active" type="button">Home</button>
   <button class="btn_nav fadeIn aboutLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">About</button>
   <button class="btn_nav fadeIn contactLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Contact</button>
   </nav>
   `;
+
+  const emailForm = `
+          <form class="col-span-2 w-full p-4 max-w-lg">
+          <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                First Name
+              </label>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane">
+              <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+            </div>
+            <div class="w-full md:w-1/2 px-3">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                Last Name
+              </label>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe">
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full px-3">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                E-mail
+              </label>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email">
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full px-3">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                Message
+              </label>
+              <textarea class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message"></textarea>
+            </div>
+          </div>
+          <div class="md:flex md:items-center">
+            <div class="md:w-1/3">
+              <button class="shadow bg-teal-400 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+                Send
+              </button>
+            </div>
+            <div class="md:w-2/3"></div>
+          </div>
+        </form>
+        `;
 
   // defining typewrite function
   (function ($) {
@@ -15,7 +59,7 @@ $(document).ready(function () {
       var settings = {
         selector: this,
         extra_char: "",
-        delay: 55,
+        delay: 50,
         trim: false,
         callback: true,
       };
@@ -143,6 +187,7 @@ $(document).ready(function () {
               <dt>HTML/Pug</dt>
               <dt>CSS/Sass</dt>
               <dt>Javascript</dt>
+              <dt>Node.js</dt>
               <dt>Visual Studio Code</dt>
               <dt>Github</dt>
               <dt>Terminal</dt>
@@ -154,7 +199,7 @@ $(document).ready(function () {
           <div class="skills2 col-span-1 bg-gray-100 w-auto h-auto mx-5 p-10 rounded-lg">
             <i class="fas fa-pencil-ruler fa-4x mt-8"></i>
             <h2 class="text-2xl font-bold mt-4 p-2">Designer</h2>
-            <p class="mt-2 p-2 mx-3">I strive to create elegant, resonant designs that create impactful interactions with the user.</p>
+            <p class="mt-2 p-2 mx-3">I strive to create elegant designs that create impactful user interactions.</p>
             <h3 class="text-xl text-pink-800 font-semibold mt-2 p-3">Things I love to design:</h3>
             <dl>
               <dt>UX, UI</dt>
@@ -171,7 +216,7 @@ $(document).ready(function () {
           <div class="skills3 col-span-1 bg-gray-100 w-auto h-auto mx-5 p-10 rounded-lg">
             <i class="fas fa-users fa-4x mt-8"></i>
             <h2 class="text-2xl font-bold mt-4 p-2">Collaborator</h2>
-            <p class="mt-2 p-2 mx-3">I love working in teams and draw upon a diverse experience background to solve problems.</p>
+            <p class="mt-2 p-2 mx-3">I love working in teams, and I draw upon diverse experiences to inform my collaborating.</p>
             <h3 class="text-xl text-pink-800 font-semibold mt-2 p-3">Experiences I draw from:</h3>
             <dl>
               <dt>2+ years government experience</dt>
@@ -232,8 +277,9 @@ $(document).ready(function () {
         <div class="row-span-1 col-span-9"></div>
         ${nav}
         <div class="col-span-1"></div>
-        <div class="grid grid-cols-3 col-span-7 justify-center text-blue-900">
-        
+        <div class="col-span-7 justify-center h-auto">
+          <h2 class="text-2xl font-bold text-white p-4">Who is Robert Schmahl?</h2>
+          <p></p>
         </div>
         <div class="col-span-1"></div>
         `);
@@ -243,10 +289,38 @@ $(document).ready(function () {
       }, 1600);
     };
 
+    // properties for contact page
+    if (btnTxt == "Contact" && (!$(".contactLink").hasClass("active"))) {
+      setTimeout(function () {
+        $("main")
+          .addClass("from-purple-800 via-indigo-700 to-indigo-400")
+          .removeClass(" from-indigo-900 via-blue-800 to-blue-600");
+        $("header")
+          .addClass("grid-rows-2 grid-cols-9")
+          .removeClass("introduction grid-rows-6 grid-flow-col")
+          .empty().append(`
+        <div class="row-span-1 col-span-5"></div>
+        ${nav}
+        <div class="col-span-1"></div>
+        <div class="col-span-3 bg-gray-100 justify-center h-auto w-auto rounded-lg shadow-lg">
+          ${emailForm}
+          <div class="col-span-1">
+            <a href="https://www.linkedin.com/in/robert-schmahl/">
+              <i class="fab fa-linkedin-in fa-2x" style="color: Tomato;"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-span-1"></div>
+        `);
+        $("nav").addClass("col-span-9");
+        $(".btn_nav").removeClass("active");
+        $(".contactLink").addClass("active");
+      }, 1600);
+    };
+
+
   });
 });
 
 // resume download link
-{
   /* <div class="resumeLink row-span-1 col-span-9 bg-gray-100 text-pink-800 p-3 text-2xl"><a href="../assets/downloads/2020-Resume-RobertSchmahl.pdf">Download my Resume <em>(pdf 110kb)</em></a></div> */
-}
