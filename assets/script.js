@@ -3,7 +3,7 @@ $(document).ready(function () {
   const nav = `<nav class="row-span-1">
   <button class="btn_nav fadeIn projectsLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Projects</button>
   <button class="btn_nav fadeIn skillsLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Skills</button>
-  <button class="btn_nav fadeIn homeLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Home</button>
+  <button class="btn_nav fadeIn homeLink text-xl mx-5 px-4 py-3 rounded-lg active" type="button">Home</button>
   <button class="btn_nav fadeIn aboutLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">About</button>
   <button class="btn_nav fadeIn contactLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Contact</button>
   </nav>
@@ -76,7 +76,7 @@ $(document).ready(function () {
       $(".page__style").removeClass("fadeIn");
     }, 1500);
     // properties for projects page
-    if (btnTxt === "Projects") {
+    if ((btnTxt == "Projects") && (!$(".projectsLink").hasClass("active"))) {
       setTimeout(function () {
         $("main")
           .addClass("from-green-900 via-green-600 to-teal-600")
@@ -114,11 +114,12 @@ $(document).ready(function () {
         <div class="col-span-1"></div>
         `);
         $("nav").addClass("col-span-9");
+        $(".btn_nav").removeClass("active");
         $(".projectsLink").addClass("active");
       }, 1600);
     }
     // properties for skills page
-    if (btnTxt === "Skills") {
+    if ((btnTxt == "Skills") && (!$(".skillsLink").hasClass("active"))) {
       setTimeout(function () {
         $("main")
           .addClass("from-orange-700 via-orange-500 to-yellow-400")
@@ -187,9 +188,35 @@ $(document).ready(function () {
         <div class="col-span-1"></div>
         `);
         $("nav").addClass("col-span-9");
+        $(".btn_nav").removeClass("active");
         $(".skillsLink").addClass("active");
       }, 1600);
     }
-    
+
+    // properties for home page
+    if ((btnTxt == "Home" )  && (!$(".homeLink").hasClass("active"))) {
+      setTimeout(function () {
+        $("body").empty().append(`
+        <main
+       class="wrapper page_style bg-gradient-to-br from-indigo-900 via-blue-800 to-blue-600 h-screen w-screen"
+     >
+       <header
+         class="introduction page_description grid grid-rows-6 grid-flow-col justify-center text-center gap-10 text-white"
+       >
+         <div class="row-span-3"></div>
+         <h1 class="row-span-1 font-medium text-4xl">
+           Hi, my name is Robert.
+         </h1>
+         <h1 class="row-span-1 font-normal text-3xl">
+           I am a full-stack web developer and graphic designer.
+         </h1>
+         ${nav}
+       </header>
+     </main>
+     `);
+        $(".btn_nav").removeClass("active");
+        $(".homeLink").addClass("active");
+      }, 1600);
+    }
   });
 });
