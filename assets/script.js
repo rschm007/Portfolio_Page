@@ -76,7 +76,7 @@ $(document).ready(function () {
       $(".page__style").removeClass("fadeIn");
     }, 1500);
     // properties for projects page
-    if ((btnTxt == "Projects") && (!$(".projectsLink").hasClass("active"))) {
+    if (btnTxt == "Projects" && (!$(".projectsLink").hasClass("active"))) {
       setTimeout(function () {
         $("main")
           .addClass("from-green-900 via-green-600 to-teal-600")
@@ -117,9 +117,9 @@ $(document).ready(function () {
         $(".btn_nav").removeClass("active");
         $(".projectsLink").addClass("active");
       }, 1600);
-    }
+    };
     // properties for skills page
-    if ((btnTxt == "Skills") && (!$(".skillsLink").hasClass("active"))) {
+    if (btnTxt == "Skills" && (!$(".skillsLink").hasClass("active"))) {
       setTimeout(function () {
         $("main")
           .addClass("from-orange-700 via-orange-500 to-yellow-400")
@@ -191,10 +191,10 @@ $(document).ready(function () {
         $(".btn_nav").removeClass("active");
         $(".skillsLink").addClass("active");
       }, 1600);
-    }
+    };
 
     // properties for home page
-    if ((btnTxt == "Home" )  && (!$(".homeLink").hasClass("active"))) {
+    if (btnTxt == "Home" && (!$(".homeLink").hasClass("active"))) {
       setTimeout(function () {
         $("body").empty().append(`
         <main
@@ -217,6 +217,36 @@ $(document).ready(function () {
         $(".btn_nav").removeClass("active");
         $(".homeLink").addClass("active");
       }, 1600);
-    }
+    };
+
+    // properties for about page
+    if (btnTxt == "About" && (!$(".aboutLink").hasClass("active"))) {
+      setTimeout(function () {
+        $("main")
+          .addClass("from-blue-900 via-teal-400 to-teal-200")
+          .removeClass(" from-indigo-900 via-blue-800 to-blue-600");
+        $("header")
+          .addClass("grid-rows-2 grid-cols-9")
+          .removeClass("introduction grid-rows-6 grid-flow-col")
+          .empty().append(`
+        <div class="row-span-1 col-span-9"></div>
+        ${nav}
+        <div class="col-span-1"></div>
+        <div class="grid grid-cols-3 col-span-7 justify-center text-blue-900">
+        
+        </div>
+        <div class="col-span-1"></div>
+        `);
+        $("nav").addClass("col-span-9");
+        $(".btn_nav").removeClass("active");
+        $(".aboutLink").addClass("active");
+      }, 1600);
+    };
+
   });
 });
+
+// resume download link
+{
+  /* <div class="resumeLink row-span-1 col-span-9 bg-gray-100 text-pink-800 p-3 text-2xl"><a href="../assets/downloads/2020-Resume-RobertSchmahl.pdf">Download my Resume <em>(pdf 110kb)</em></a></div> */
+}
