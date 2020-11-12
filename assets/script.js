@@ -223,7 +223,11 @@ $(document).ready(function () {
         $("nav").addClass("col-span-9");
         $(".btn_nav").removeClass("active");
         $(".skillsLink").addClass("active");
-        $(".resumeLink").addClass(`col-span-9 resumeLinkSkills ${hoverEnlarge} bg-yellow-100 shadow-lg h-32`).removeClass(`col-span-9 h-auto bg-gray-100`);
+        $(".resumeLink")
+          .addClass(
+            `col-span-9 resumeLinkSkills ${hoverEnlarge} bg-yellow-100 shadow-lg h-32`
+          )
+          .removeClass(`col-span-9 h-auto bg-gray-100`);
         $(".fa-download").css("color: Tomato");
       }, 1600);
       setTimeout(function () {
@@ -239,21 +243,21 @@ $(document).ready(function () {
         }
         $("body").empty().append(`
         <main
-       class="wrapper page_style bg-gradient-to-br from-indigo-900 via-blue-800 to-blue-600 h-screen w-screen"
-     >
-       <.page_description
-         class="introduction page_description grid grid-rows-6 grid-flow-col justify-center text-center gap-10 text-white"
-       >
-         <div class="row-span-3"></div>
-         <h1 class="row-span-1 font-medium text-4xl">
-           Hi, my name is Robert.
-         </h1>
-         <h1 class="row-span-1 font-normal text-3xl">
-           I am a full-stack web developer and graphic designer.
-         </h1>
-         ${nav}
-       </.page_description>
-     </main>
+        class="wrapper page_style bg-gradient-to-br from-indigo-900 via-blue-800 to-blue-600 h-screen w-screen"
+      >
+        <div
+          class="introduction page_description grid grid-rows-6 grid-flow-col justify-center text-center gap-10 text-white"
+        >
+          <div class="row-span-3"></div>
+          <h1 class="row-span-1 font-medium text-4xl">
+            Hi, my name is Robert.
+          </h1>
+          <h1 class="row-span-1 font-normal text-3xl">
+            I am a full-stack web developer and graphic designer.
+          </h1>
+          ${nav}
+        </div>
+      </main>
      `);
         $(".btn_nav").removeClass("active");
         $(".homeLink").addClass("active");
