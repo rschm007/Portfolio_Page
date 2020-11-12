@@ -74,27 +74,23 @@ $(document).ready(function () {
     },
   });
 
-  // define function for page render animation
-  function pageRender() {
-        // grab the value of the button
-        let btnTxt = $(this).text();
-
-        // animate content
-        $(".page_style").addClass("animate_content");
-        $(".page_description").fadeOut(100).delay(2800).fadeIn();
-    
-        setTimeout(function () {
-          $(".page__style").removeClass("animate_content");
-        }, 3200);
-    
-        //remove fadeIn class after 1500ms
-        setTimeout(function () {
-          $(".page__style").removeClass("fadeIn");
-        }, 1500);
-  };
   // add animation function
   $(document).on("click", ".btn_nav", function () {
-    pageRender();
+    // grab the value of the button
+    let btnTxt = $(this).text();
+
+    // animate content
+    $(".page_style").addClass("animate_content");
+    $(".page_description").fadeOut(100).delay(2800).fadeIn();
+
+    setTimeout(function () {
+      $(".page__style").removeClass("animate_content");
+    }, 3200);
+
+    //remove fadeIn class after 1500ms
+    setTimeout(function () {
+      $(".page__style").removeClass("fadeIn");
+    }, 1500);
 
     // properties for projects page
     if (btnTxt == "Projects") {
