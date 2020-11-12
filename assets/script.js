@@ -92,11 +92,14 @@ $(document).ready(function () {
       $(".page__style").removeClass("fadeIn");
     }, 1500);
     // properties for projects page
-    if (btnTxt == "Projects" && (!$(".projectsLink").hasClass("active"))) {
+    if (btnTxt == "Projects") {
       // defining unique styles for project cards
-      const projectCard = `col-span-1 bg-gray-100 w-auto h-auto mx-5 rounded-lg`
+      const projectCard = `col-span-1 bg-gray-100 w-auto h-auto mx-5 rounded-lg`;
 
       setTimeout(function () {
+        if ($(".overlay")[0]) {
+          $(".overlay").remove();
+        }
         $("main")
           .addClass("from-green-900 via-green-600 to-teal-600")
           .removeClass(" from-indigo-900 via-blue-800 to-blue-600");
@@ -136,15 +139,19 @@ $(document).ready(function () {
         $(".btn_nav").removeClass("active");
         $(".projectsLink").addClass("active");
       }, 1600);
-    };
+    }
+
     // properties for skills page
-    if (btnTxt == "Skills" && (!$(".skillsLink").hasClass("active"))) {
+    if (btnTxt == "Skills") {
       // defining unique in-line styles for skills cards
       const skillsCardStyles = `col-span-1 bg-gray-100 w-auto h-auto mx-5 p-10 rounded-lg`;
       const skillsCardH3 = `text-xl text-pink-800 font-semibold mt-4 p-3`;
       const skillsIconStyles = `fa-4x mt-8`;
 
       setTimeout(function () {
+        if ($(".overlay")[0]) {
+          $(".overlay").remove();
+        }
         $("main")
           .addClass("from-orange-700 via-orange-500 to-yellow-400")
           .removeClass(" from-indigo-900 via-blue-800 to-blue-600");
@@ -219,11 +226,14 @@ $(document).ready(function () {
       setTimeout(function () {
         $("main").addClass("h-full").removeClass("h-screen");
       }, 3250);
-    };
+    }
 
     // properties for home page
-    if (btnTxt == "Home" && (!$(".homeLink").hasClass("active"))) {
+    if (btnTxt == "Home") {
       setTimeout(function () {
+        if ($(".overlay")[0]) {
+          $(".overlay").remove();
+        }
         $("body").empty().append(`
         <main
        class="wrapper page_style bg-gradient-to-br from-indigo-900 via-blue-800 to-blue-600 h-screen w-screen"
@@ -245,15 +255,18 @@ $(document).ready(function () {
         $(".btn_nav").removeClass("active");
         $(".homeLink").addClass("active");
       }, 1600);
-    };
+    }
 
     // properties for about page
-    if (btnTxt == "About" && (!$(".aboutLink").hasClass("active"))) {
+    if (btnTxt == "About") {
       const aboutH2 = `text-2xl font-bold text-gray-100 pt-4 text-5xl`;
-      const aboutH3 = `text-xl font-semibold text-blue-800 pt-1 pb-4 text-xl`;
+      const aboutH3 = `text-xl font-semibold text-blue-900 pt-1 pb-4 text-xl`;
       const aboutContentCards = `col-span-7 h-auto rounded-lg shadow-lg text-blue-900 p-4`;
 
       setTimeout(function () {
+        if ($(".overlay")[0]) {
+          $(".overlay").remove();
+        }
         $("main")
           .addClass("from-blue-900 via-teal-400 to-teal-200")
           .removeClass(" from-indigo-900 via-blue-800 to-blue-600")
@@ -262,36 +275,36 @@ $(document).ready(function () {
           .addClass("grid-rows-2 grid-cols-9")
           .removeClass("introduction grid-rows-6 grid-flow-col")
           .empty().append(`
-        <div class="row-span-1 col-span-9"></div>
-        ${nav}
-        <div class="aboutHeader col-span-7 justify-center h-auto w-64">
-          <h2 class="${aboutH2}">Who is Robert Schmahl?</h2>
-          <h3 class="${aboutH3} pb-4">Or, How I Learned to Stop Worrying and Love the Process</h2>
-        </div>
-        <div class="aboutContent1 bg-gray-300 ${aboutContentCards}">
-          <p class="${pStyles}">I, Robert Schmahl, am a full-stack web developer and graphic designer. Hopefully you already knew that because you took the time to watch the typewriter animation on the home page (thanks for doing that!). I am currently living in Irvine, CA. I earned my degree in Political Science from UC Riverside and then signed up with AmeriCorps to
-          begin an illustrious career in politics.</p>
-        </div>
-        <div class="aboutContent2 col-span-9 justify-center text-2xl h-auto font-extrabold text-blue-900 p-4">
-          <p class="${pStyles}">Spoiler Alert: I am no longer working in politics</p>
-        </div>
-        <div class="aboutContent3 bg-gray-100 ${aboutContentCards}">
-          <p class="${pStyles}">Turns out, I am much more of a creative than a politician. It wasn't all a loss, though -
-          during my time in national service I discovered I had a knack for graphic design. So after completing my tour I decided I would make a go at being a professional artist.
-          After a short misadventure working as a fishmonger I landed a job as a graphic designer at a live theatre. I was living the dream! I was being paid to be creative, and I even got free show tickets! </p>
-        </div>
-        <div class="aboutContent4 col-span-9 justify-center text-5xl h-auto font-extrabold text-blue-900 p-4">
-          <p class="${pStyles}">Then, COVID-19</p>
-        </div>
-        <div class="aboutContent5 bg-gray-100 ${aboutContentCards}">
-          <p class="${pStyles}">Like many people across the world, I was suddenly without a job. After thinking hard about what I wanted from my career, I decided to attend the UCI Full Stack Flex Bootcamp.
-          So far, My journey in web development has been a lot like many self-learning journeys I've undertaken, with one exception: </p>
-        </div>
-        <div class="aboutContent6 col-span-9 justify-center text-3xl h-auto font-extrabold text-blue-900 p-4">
-          <p class="${pStyles}">I really feel like this work is for me</p>
-        </div>
-        <div class="col-span-1"></div>
-        `);
+            <div class="row-span-1 col-span-9"></div>
+            ${nav}
+            <div class="aboutHeader col-span-7 justify-center h-auto w-64">
+              <h2 class="${aboutH2}">Who is Robert Schmahl?</h2>
+              <h3 class="${aboutH3} pb-4">Or, How I Learned to Stop Worrying and Love the Process</h2>
+            </div>
+            <div class="aboutContent1 bg-gray-300 ${aboutContentCards}">
+              <p class="${pStyles}">I, Robert Schmahl, am a full-stack web developer and graphic designer. Hopefully you already knew that because you took the time to watch the typewriter animation on the home page (thanks for doing that!). I am currently living in Irvine, CA. I earned my degree in Political Science from UC Riverside and then signed up with AmeriCorps to
+              begin an illustrious career in politics.</p>
+            </div>
+            <div class="aboutContent2 col-span-9 justify-center text-2xl h-auto font-extrabold text-blue-900 p-4">
+              <p class="${pStyles}">Spoiler Alert: I am no longer working in politics</p>
+            </div>
+            <div class="aboutContent3 bg-gray-100 ${aboutContentCards}">
+              <p class="${pStyles}">Turns out, I am much more of a creative than a politician. It wasn't all a loss, though -
+              during my time in national service I discovered I had a knack for graphic design. So after completing my tour I decided I would make a go at being a professional artist.
+              After a short misadventure working as a fishmonger I landed a steady gig as a graphic designer at a live theatre. Suddenly, I was living the dream! I was being paid to be creative, and I even got free show tickets! </p>
+            </div>
+            <div class="aboutContent4 col-span-9 justify-center text-5xl h-auto font-extrabold text-blue-900 p-4">
+              <p class="${pStyles}">Then, COVID-19</p>
+            </div>
+            <div class="aboutContent5 bg-gray-100 ${aboutContentCards}">
+              <p class="${pStyles}">Like many people, I was suddenly without a job. After thinking hard about what I wanted from my career, I decided to attend the UCI Full Stack Flex Bootcamp.
+              So far, My journey in web development has been a lot like many self-learning journeys I've undertaken, with one exception: </p>
+            </div>
+            <div class="aboutContent6 col-span-9 justify-center text-3xl h-auto font-extrabold text-blue-900 p-4">
+              <p class="${pStyles}">I really feel like this work is for me</p>
+            </div>
+            <div class="col-span-1"></div>
+            `);
         $("nav").addClass("col-span-9");
         $(".btn_nav").removeClass("active");
         $(".aboutLink").addClass("active");
@@ -299,10 +312,13 @@ $(document).ready(function () {
       setTimeout(function () {
         $("main").addClass("h-full").removeClass("h-screen");
       }, 3250);
-    };
+    }
 
     // properties for contact page
-    if (btnTxt == "Contact" && (!$(".contactLink").hasClass("active"))) {
+    if (btnTxt == "Contact") {
+      if ($(".overlay")[0]) {
+        $(".overlay").remove();
+      }
       setTimeout(function () {
         $("main")
           .addClass("from-purple-800 via-indigo-700 to-indigo-400")
@@ -337,8 +353,6 @@ $(document).ready(function () {
       setTimeout(function () {
         $("main").addClass("h-full").removeClass("h-screen");
       }, 3250);
-    };
-
-
+    }
   });
 });
