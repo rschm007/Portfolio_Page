@@ -20,6 +20,11 @@ $(document).ready(function () {
 
   const hoverEnlarge = `duration-500 ease-in-out hover:-translate-y-1 transform hover:scale-120`;
 
+  // defining styles to be used throughout
+  const h2Styles = `text-2xl font-bold mt-4 p-2`;
+  const h3Styles = `font-normal p-2 mb-4`;
+  const pStyles = `mt-2 p-2`;
+
   // defining typewrite function
   (function ($) {
     $.fn.typewrite = function (options) {
@@ -88,11 +93,14 @@ $(document).ready(function () {
     }, 1500);
     // properties for projects page
     if (btnTxt == "Projects" && (!$(".projectsLink").hasClass("active"))) {
+      // defining unique styles for project cards
+      const projectCard = `col-span-1 bg-gray-100 w-auto h-auto mx-5 rounded-lg`
+
       setTimeout(function () {
         $("main")
           .addClass("from-green-900 via-green-600 to-teal-600")
           .removeClass(" from-indigo-900 via-blue-800 to-blue-600");
-        $("header")
+        $(".page_description")
           .addClass("grid-rows-2 grid-cols-9")
           .removeClass("introduction grid-rows-6 grid-flow-col")
           .empty().append(`
@@ -100,23 +108,23 @@ $(document).ready(function () {
         ${nav}
         <div class="col-span-1"></div>
         <div class="grid grid-cols-3 col-span-7 justify-center text-blue-900">
-          <div class="project1 col-span-1 bg-gray-100 w-auto h-auto mx-5 rounded-lg">
-            <h2 class="text-2xl font-bold mt-4 p-2">Babel</h2>
-            <h3 class="font-normal p-2 mb-4">Generates recipes based off of desired ingredients</h3>
+          <div class="project1 ${projectCard}">
+            <h2 class="${h2Styles}">Babel</h2>
+            <h3 class="${h3Styles}">Generates recipes based off of desired ingredients</h3>
             <a href="https://https-github-com-steversontong.github.io/Recipe-Generatorf/"><img src="../assets/imgs/webdevo_gif1.gif" alt="An animated gif of the Recipe Generator web app"></img></a>
             <a href="https://https-github-com-steversontong.github.io/Recipe-Generatorf/"><i class="fas fa-link fa-2x m-2 p-2 ${hoverEnlarge}"></i></a>
             <a href="https://github.com/https-github-com-steversonTong/Recipe-Generatorf"><i class="fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}"></i></a>
           </div>
-          <div class="project2 col-span-1 bg-gray-100 w-auto h-auto mx-5 rounded-lg">
-            <h2 class="text-2xl font-bold mt-4 p-2">Day Planner</h2>
-            <h3 class="font-normal p-2 mb-4">Plan your day and track the current time</h3>
+          <div class="project2 ${projectCard}">
+            <h2 class="${h2Styles}">Day Planner</h2>
+            <h3 class="${h3Styles}">Plan your day and track the current time</h3>
             <a href="https://rschm007.github.io/Day-Planner/"><img src="../assets/imgs/webdevo_gif2.gif" alt="An animated gif of the Day Planner web app"></img></a>
             <a href="https://rschm007.github.io/Day-Planner/"><i class="fas fa-link fa-2x m-2 p-2 ${hoverEnlarge}"></i></a>
             <a href="https://github.com/rschm007/Day-Planner"><i class="fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}"></i></a>
           </div>
-          <div class="project3 col-span-1 bg-gray-100 w-auto h-auto mx-5 rounded-lg">
-            <h2 class="text-2xl font-bold mt-4 p-2">Weather Dashboard</h2>
-            <h3 class="font-normal p-2 mb-4">Use the OpenWeatherAPI to search forecasts</h3>
+          <div class="project3 ${projectCard}">
+            <h2 class="${h2Styles}">Weather Dashboard</h2>
+            <h3 class="${h3Styles}">Use the OpenWeatherAPI to search forecasts</h3>
             <a href="https://rschm007.github.io/Weather-Dashboard/"><img src="../assets/imgs/webdevo_gif3.gif" alt="An animated gif of the Weather Dashboard web app"></img></a>
             <a href="https://rschm007.github.io/Weather-Dashboard/"><i class="fas fa-link fa-2x m-2 p-2 ${hoverEnlarge}"></i></a>
             <a href="https://github.com/rschm007/Weather-Dashboard"><i class="fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}"></i></a>
@@ -131,11 +139,16 @@ $(document).ready(function () {
     };
     // properties for skills page
     if (btnTxt == "Skills" && (!$(".skillsLink").hasClass("active"))) {
+      // defining unique in-line styles for skills cards
+      const skillsCardStyles = `col-span-1 bg-gray-100 w-auto h-auto mx-5 p-10 rounded-lg`;
+      const skillsCardH3 = `text-xl text-pink-800 font-semibold mt-4 p-3`;
+      const skillsIconStyles = `fa-4x mt-8`;
+
       setTimeout(function () {
         $("main")
           .addClass("from-orange-700 via-orange-500 to-yellow-400")
           .removeClass(" from-indigo-900 via-blue-800 to-blue-600");
-        $("header")
+        $(".page_description")
           .addClass("grid-rows-2 grid-cols-9")
           .removeClass("introduction grid-rows-6 grid-flow-col")
           .empty().append(`
@@ -143,13 +156,13 @@ $(document).ready(function () {
         ${nav}
         <div class="col-span-1"></div>
         <div class="grid grid-cols-3 col-span-7 justify-center text-blue-900">
-          <div class="skills1 col-span-1 bg-gray-100 w-auto h-auto mx-5 p-10 rounded-lg">
-            <i class="fas fa-cogs fa-4x mt-8"></i>
-            <h2 class="text-2xl font-bold mt-4 p-2">Developer</h2>
-            <p class="mt-2 p-2 mx-3">I am a full-stack web developer, able to tackle projects from front-end to back-end.</p>
-            <h3 class="text-xl text-pink-800 font-semibold mt-4 p-3">Specialties:</h3>
+          <div class="skills1 ${skillsCardStyles}">
+            <i class="fas fa-cogs ${skillsIconStyles}"></i>
+            <h2 class="${h2Styles}">Developer</h2>
+            <p class="${pStyles}">I am a full-stack web developer, able to tackle projects from front-end to back-end.</p>
+            <h3 class="${skillsCardH3}">Specialties:</h3>
             <p>UX, UI, Web, Mobile, Brands</p>
-            <h3 class="text-xl text-pink-800 font-semibold mt-2 p-3">Dev Tools & Languages:</h3>
+            <h3 class="${skillsCardH3}">Dev Tools & Languages:</h3>
             <dl>
               <dt>HTML/Pug</dt>
               <dt>CSS/Sass</dt>
@@ -163,11 +176,11 @@ $(document).ready(function () {
             </dl>
 
           </div>
-          <div class="skills2 col-span-1 bg-gray-100 w-auto h-auto mx-5 p-10 rounded-lg">
-            <i class="fas fa-pencil-ruler fa-4x mt-8"></i>
-            <h2 class="text-2xl font-bold mt-4 p-2">Designer</h2>
-            <p class="mt-2 p-2 mx-3">I strive to create elegant designs that create impactful user interactions.</p>
-            <h3 class="text-xl text-pink-800 font-semibold mt-2 p-3">Things I love to design:</h3>
+          <div class="skills2 ${skillsCardStyles}">
+            <i class="fas fa-pencil-ruler ${skillsIconStyles}"></i>
+            <h2 class="${h2Styles}">Designer</h2>
+            <p class="${pStyles}">I strive to create elegant designs that create impactful user interactions.</p>
+            <h3 class="${skillsCardH3}">Things I love to design:</h3>
             <dl>
               <dt>UX, UI</dt>
               <dt>Logos</dt>
@@ -180,11 +193,11 @@ $(document).ready(function () {
             </dl>
 
           </div>
-          <div class="skills3 col-span-1 bg-gray-100 w-auto h-auto mx-5 p-10 rounded-lg">
-            <i class="fas fa-users fa-4x mt-8"></i>
-            <h2 class="text-2xl font-bold mt-4 p-2">Collaborator</h2>
-            <p class="mt-2 p-2 mx-3">I love working in teams, and I draw upon diverse experiences to inform my collaborating.</p>
-            <h3 class="text-xl text-pink-800 font-semibold mt-2 p-3">Experiences I draw from:</h3>
+          <div class="skills3 ${skillsCardStyles}">
+            <i class="fas fa-users ${skillsIconStyles}"></i>
+            <h2 class="${h2Styles}">Collaborator</h2>
+            <p class="${pStyles}">I love working in teams, and I draw upon diverse experiences to inform my collaborating.</p>
+            <h3 class="${skillsCardH3}">Experiences I draw from:</h3>
             <dl>
               <dt>2+ years government experience</dt>
               <dt>3+ years web development</dt>
@@ -203,6 +216,9 @@ $(document).ready(function () {
         $(".btn_nav").removeClass("active");
         $(".skillsLink").addClass("active");
       }, 1600);
+      setTimeout(function () {
+        $("main").addClass("h-full").removeClass("h-screen");
+      }, 3250);
     };
 
     // properties for home page
@@ -212,7 +228,7 @@ $(document).ready(function () {
         <main
        class="wrapper page_style bg-gradient-to-br from-indigo-900 via-blue-800 to-blue-600 h-screen w-screen"
      >
-       <header
+       <.page_description
          class="introduction page_description grid grid-rows-6 grid-flow-col justify-center text-center gap-10 text-white"
        >
          <div class="row-span-3"></div>
@@ -223,7 +239,7 @@ $(document).ready(function () {
            I am a full-stack web developer and graphic designer.
          </h1>
          ${nav}
-       </header>
+       </.page_description>
      </main>
      `);
         $(".btn_nav").removeClass("active");
@@ -233,20 +249,46 @@ $(document).ready(function () {
 
     // properties for about page
     if (btnTxt == "About" && (!$(".aboutLink").hasClass("active"))) {
+      const aboutH2 = `text-2xl font-bold text-gray-100 pt-4 text-5xl`;
+      const aboutH3 = `text-xl font-semibold text-blue-800 pt-1 pb-4 text-xl`;
+      const aboutContentCards = `col-span-7 h-auto rounded-lg shadow-lg text-blue-900 p-4`;
+
       setTimeout(function () {
         $("main")
           .addClass("from-blue-900 via-teal-400 to-teal-200")
-          .removeClass(" from-indigo-900 via-blue-800 to-blue-600");
-        $("header")
+          .removeClass(" from-indigo-900 via-blue-800 to-blue-600")
+          .prepend(`<div class="overlay bg-local"></div>`);
+        $(".page_description")
           .addClass("grid-rows-2 grid-cols-9")
           .removeClass("introduction grid-rows-6 grid-flow-col")
           .empty().append(`
         <div class="row-span-1 col-span-9"></div>
         ${nav}
-        <div class="col-span-1"></div>
-        <div class="col-span-7 justify-center h-auto">
-          <h2 class="text-2xl font-bold text-white p-4">Who is Robert Schmahl?</h2>
-          <p></p>
+        <div class="aboutHeader col-span-7 justify-center h-auto w-64">
+          <h2 class="${aboutH2}">Who is Robert Schmahl?</h2>
+          <h3 class="${aboutH3} pb-4">Or, How I Learned to Stop Worrying and Love the Process</h2>
+        </div>
+        <div class="aboutContent1 bg-gray-300 ${aboutContentCards}">
+          <p class="${pStyles}">I, Robert Schmahl, am a full-stack web developer and graphic designer. Hopefully you already knew that because you took the time to watch the typewriter animation on the home page (thanks for doing that!). I am currently living in Irvine, CA. I earned my degree in Political Science from UC Riverside and then signed up with AmeriCorps to
+          begin an illustrious career in politics.</p>
+        </div>
+        <div class="aboutContent2 col-span-9 justify-center text-2xl h-auto font-extrabold text-blue-900 p-4">
+          <p class="${pStyles}">Spoiler Alert: I am no longer working in politics</p>
+        </div>
+        <div class="aboutContent3 bg-gray-100 ${aboutContentCards}">
+          <p class="${pStyles}">Turns out, I am much more of a creative than a politician. It wasn't all a loss, though -
+          during my time in national service I discovered I had a knack for graphic design. So after completing my tour I decided I would make a go at being a professional artist.
+          After a short misadventure working as a fishmonger I landed a job as a graphic designer at a live theatre. I was living the dream! I was being paid to be creative, and I even got free show tickets! </p>
+        </div>
+        <div class="aboutContent4 col-span-9 justify-center text-5xl h-auto font-extrabold text-blue-900 p-4">
+          <p class="${pStyles}">Then, COVID-19</p>
+        </div>
+        <div class="aboutContent5 bg-gray-100 ${aboutContentCards}">
+          <p class="${pStyles}">Like many people across the world, I was suddenly without a job. After thinking hard about what I wanted from my career, I decided to attend the UCI Full Stack Flex Bootcamp.
+          So far, My journey in web development has been a lot like many self-learning journeys I've undertaken, with one exception: </p>
+        </div>
+        <div class="aboutContent6 col-span-9 justify-center text-3xl h-auto font-extrabold text-blue-900 p-4">
+          <p class="${pStyles}">I really feel like this work is for me</p>
         </div>
         <div class="col-span-1"></div>
         `);
@@ -254,6 +296,9 @@ $(document).ready(function () {
         $(".btn_nav").removeClass("active");
         $(".aboutLink").addClass("active");
       }, 1600);
+      setTimeout(function () {
+        $("main").addClass("h-full").removeClass("h-screen");
+      }, 3250);
     };
 
     // properties for contact page
@@ -262,7 +307,7 @@ $(document).ready(function () {
         $("main")
           .addClass("from-purple-800 via-indigo-700 to-indigo-400")
           .removeClass("from-indigo-900 via-blue-800 to-blue-600");
-        $("header")
+        $(".page_description")
           .addClass("grid-rows-2 grid-cols-9")
           .removeClass("introduction grid-rows-6 grid-flow-col")
           .empty().append(`
