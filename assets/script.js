@@ -10,48 +10,15 @@ $(document).ready(function () {
   `;
 
   const emailForm = `
-          <form class="w-full p-4 max-w-lg">
-          <div class="flex flex-wrap -mx-3 mb-6">
-            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                First Name
-              </label>
-              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane">
-              <p class="text-red-500 text-xs italic">Please fill out this field.</p>
-            </div>
-            <div class="w-full md:w-1/2 px-3">
-              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                Last Name
-              </label>
-              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe">
-            </div>
-          </div>
-          <div class="flex flex-wrap -mx-3 mb-6">
-            <div class="w-full px-3">
-              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-                E-mail
-              </label>
-              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email">
-            </div>
-          </div>
-          <div class="flex flex-wrap -mx-3 mb-6">
-            <div class="w-full px-3">
-              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-                Message
-              </label>
-              <textarea class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message"></textarea>
-            </div>
-          </div>
-          <div class="md:flex md:items-center">
-            <div class="md:w-1/3">
-              <button class="shadow bg-teal-400 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
-                Send
-              </button>
-            </div>
-            <div class="md:w-2/3"></div>
-          </div>
-        </form>
-        `;
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdPRB1YR4bfALbPptVAUAsYcGRWLpsgmQ_AsvHbNk6xTerFbg/viewform?embedded=true" class="bg-gray-100 rounded-lg shadow-lg" width="520" scrolling="no" height="720" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>`;
+
+  const resumeDownload = `
+  <a href="../assets/downloads/2020-Resume-RobertSchmahl.pdf" download="2020-Resume-RobertSchmahl.pdf" class="resumeLink bg-gray-100 mt-16 rounded-lg h-auto w-48 py-5 px-3">
+    <i class="fa fa-download fa-2x" style="color: Mediumslateblue;"></i><p class="text-2x text-indigo-800">Download my resume <em class="text-sm"><br>(pdf 110kb)</em></p></a>
+  </a>
+  `;
+
+  const hoverEnlarge = `duration-500 ease-in-out hover:-translate-y-1 transform hover:scale-120`;
 
   // defining typewrite function
   (function ($) {
@@ -137,22 +104,22 @@ $(document).ready(function () {
             <h2 class="text-2xl font-bold mt-4 p-2">Babel</h2>
             <h3 class="font-normal p-2 mb-4">Generates recipes based off of desired ingredients</h3>
             <a href="https://https-github-com-steversontong.github.io/Recipe-Generatorf/"><img src="../assets/imgs/webdevo_gif1.gif" alt="An animated gif of the Recipe Generator web app"></img></a>
-            <a href="https://https-github-com-steversontong.github.io/Recipe-Generatorf/"><i class="fas fa-link fa-2x m-2 p-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-120"></i></a>
-            <a href="https://github.com/https-github-com-steversonTong/Recipe-Generatorf"><i class="fab fa-github-square fa-3x m-2 p-2 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-120"></i></a>
+            <a href="https://https-github-com-steversontong.github.io/Recipe-Generatorf/"><i class="fas fa-link fa-2x m-2 p-2 ${hoverEnlarge}"></i></a>
+            <a href="https://github.com/https-github-com-steversonTong/Recipe-Generatorf"><i class="fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}"></i></a>
           </div>
           <div class="project2 col-span-1 bg-gray-100 w-auto h-auto mx-5 rounded-lg">
             <h2 class="text-2xl font-bold mt-4 p-2">Day Planner</h2>
             <h3 class="font-normal p-2 mb-4">Plan your day and track the current time</h3>
             <a href="https://rschm007.github.io/Day-Planner/"><img src="../assets/imgs/webdevo_gif2.gif" alt="An animated gif of the Day Planner web app"></img></a>
-            <a href="https://rschm007.github.io/Day-Planner/"><i class="fas fa-link fa-2x m-2 p-2 transition duration-500 ease-in-out hover:-translate-y-1 transform hover:scale-120"></i></a>
-            <a href="https://github.com/rschm007/Day-Planner"><i class="fab fa-github-square fa-3x m-2 p-2 transition duration-500 ease-in-out hover:-translate-y-1 transform hover:scale-120"></i></a>
+            <a href="https://rschm007.github.io/Day-Planner/"><i class="fas fa-link fa-2x m-2 p-2 ${hoverEnlarge}"></i></a>
+            <a href="https://github.com/rschm007/Day-Planner"><i class="fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}"></i></a>
           </div>
           <div class="project3 col-span-1 bg-gray-100 w-auto h-auto mx-5 rounded-lg">
             <h2 class="text-2xl font-bold mt-4 p-2">Weather Dashboard</h2>
             <h3 class="font-normal p-2 mb-4">Use the OpenWeatherAPI to search forecasts</h3>
             <a href="https://rschm007.github.io/Weather-Dashboard/"><img src="../assets/imgs/webdevo_gif3.gif" alt="An animated gif of the Weather Dashboard web app"></img></a>
-            <a href="https://rschm007.github.io/Weather-Dashboard/"><i class="fas fa-link fa-2x m-2 p-2 transition duration-500 ease-in-out hover:-translate-y-1 transform hover:scale-120"></i></a>
-            <a href="https://github.com/rschm007/Weather-Dashboard"><i class="fab fa-github-square fa-3x m-2 p-2 transition duration-500 ease-in-out hover:-translate-y-1 transform hover:scale-120"></i></a>
+            <a href="https://rschm007.github.io/Weather-Dashboard/"><i class="fas fa-link fa-2x m-2 p-2 ${hoverEnlarge}"></i></a>
+            <a href="https://github.com/rschm007/Weather-Dashboard"><i class="fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}"></i></a>
           </div>
         </div>
         <div class="col-span-1"></div>
@@ -294,7 +261,7 @@ $(document).ready(function () {
       setTimeout(function () {
         $("main")
           .addClass("from-purple-800 via-indigo-700 to-indigo-400")
-          .removeClass(" from-indigo-900 via-blue-800 to-blue-600");
+          .removeClass("from-indigo-900 via-blue-800 to-blue-600");
         $("header")
           .addClass("grid-rows-2 grid-cols-9")
           .removeClass("introduction grid-rows-6 grid-flow-col")
@@ -302,28 +269,31 @@ $(document).ready(function () {
           <div class="row-span-1 col-span-9"></div>
         ${nav}
         <div class="col-span-2"></div>
-        <div class="col-span-3 bg-gray-100 justify-center h-auto w-auto rounded-lg shadow-lg">
+        <div class="col-span-3">
           ${emailForm}
         </div>
-        <div class="col-span-2">
-          <a href="https://www.linkedin.com/in/robert-schmahl/">
-            <i class="fab fa-linkedin fa-7x"></i>
-          </a>
-          <a href="https://github.com/rschm007">
-            <i class="fab fa-github-square fa-7x"></i>
-          </a>
+        <div class="col-span-3 grid grid-rows-5">
+          ${resumeDownload}
+          <div class="row-span-1">          
+            <a href="https://www.linkedin.com/in/robert-schmahl/" class="linkedin row-span-1">
+              <i class="fab fa-linkedin fa-7x p-4  ${hoverEnlarge}"></i>
+            </a>
+            <a href="https://github.com/rschm007" class="github row-span-1">
+              <i class="fab fa-github-square fa-7x p-4 ${hoverEnlarge}"></i>
+            </a>
+          </div>
         </div>
-        <div class="col-span-2"></div>
         `);
         $("nav").addClass("col-span-9");
         $(".btn_nav").removeClass("active");
         $(".contactLink").addClass("active");
+        $(".resumeLink").addClass(`${hoverEnlarge} row-span-1 mx-40`);
       }, 1600);
+      setTimeout(function () {
+        $("main").addClass("h-full").removeClass("h-screen");
+      }, 3250);
     };
 
 
   });
 });
-
-// resume download link
-  /* <div class="resumeLink row-span-1 col-span-9 bg-gray-100 text-pink-800 p-3 text-2xl"><a href="../assets/downloads/2020-Resume-RobertSchmahl.pdf">Download my Resume <em>(pdf 110kb)</em></a></div> */
