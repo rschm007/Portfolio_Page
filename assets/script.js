@@ -161,6 +161,7 @@ $(document).ready(function () {
           .empty().append(`
         <div class="row-span-1 col-span-9"></div>
         ${nav}
+        ${resumeDownload}
         <div class="col-span-1"></div>
         <div class="grid grid-cols-3 col-span-7 justify-center text-blue-900">
           <div class="skills1 ${skillsCardStyles}">
@@ -174,12 +175,12 @@ $(document).ready(function () {
               <dt>HTML/Pug</dt>
               <dt>CSS/Sass</dt>
               <dt>Javascript</dt>
-              <dt>Node.js</dt>
+              <dt>Bootstrap</dt>
+              <dt>Tailwindcss</dt>
+              <dt>Node</dt>
               <dt>Visual Studio Code</dt>
               <dt>Github</dt>
               <dt>Terminal</dt>
-              <dt>Bootstrap</dt>
-              <dt>TailwindCSS</dt>
             </dl>
 
           </div>
@@ -222,6 +223,8 @@ $(document).ready(function () {
         $("nav").addClass("col-span-9");
         $(".btn_nav").removeClass("active");
         $(".skillsLink").addClass("active");
+        $(".resumeLink").addClass(`col-span-9 resumeLinkSkills ${hoverEnlarge} bg-yellow-100 shadow-lg h-32`).removeClass(`col-span-9 h-auto bg-gray-100`);
+        $(".fa-download").css("color: Tomato");
       }, 1600);
       setTimeout(function () {
         $("main").addClass("h-full").removeClass("h-screen");
