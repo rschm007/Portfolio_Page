@@ -78,7 +78,7 @@ $(document).ready(function () {
 
     //remove fadeIn class after 1500ms
     setTimeout(function () {
-      $(".page__style").removeClass("fadeIn");
+      $(".page_style").removeClass("fadeIn");
     }, 1500);
   };
 
