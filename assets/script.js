@@ -100,10 +100,10 @@ $(document).ready(function () {
       // defining unique styles for project cards
       const projectCard = `col-span-1 bg-gray-100 w-auto h-auto mx-5 rounded-lg`;
 
-      setTimeout(function () {
         if ($(".overlay")[0]) {
           $(".overlay").remove();
         }
+      setTimeout(function () {
         $("main")
           .addClass("from-green-900 via-green-600 to-teal-600")
           .removeClass(" from-indigo-900 via-blue-800 to-blue-600");
@@ -153,11 +153,11 @@ $(document).ready(function () {
       const skillsCardH3 = `text-xl text-pink-800 font-semibold mt-4 p-3`;
       const skillsIconStyles = `fa-4x mt-8`;
 
-      setTimeout(function () {
         if ($(".overlay")[0]) {
           $(".overlay").remove();
         }
-        $("main")
+        setTimeout(function () {
+          $("main")
           .addClass("from-orange-700 via-orange-500 to-yellow-400")
           .removeClass(" from-indigo-900 via-blue-800 to-blue-600");
         $(".page_description")
@@ -234,7 +234,7 @@ $(document).ready(function () {
           )
           .removeClass(`col-span-9 h-auto bg-gray-100`);
         $(".fa-download").css("color: Tomato");
-      }, 1600);
+        }, 1600);
       setTimeout(function () {
         $("main").addClass("h-full").removeClass("h-screen");
       }, 3000);
@@ -243,31 +243,32 @@ $(document).ready(function () {
     // properties for home page
     if (btnTxt == "Home") {
       pageRender();
-      setTimeout(function () {
         if ($(".overlay")[0]) {
           $(".overlay").remove();
         }
-        $("body").empty().append(`
-        <main
-        class="wrapper page_style bg-gradient-to-br from-indigo-900 via-blue-800 to-blue-600 h-screen w-screen"
-      >
-        <div
-          class="introduction page_description grid grid-rows-6 grid-flow-col justify-center text-center gap-10 text-white"
+        setTimeout(function () {
+          $("body").empty().append(`
+          <main
+          class="wrapper page_style bg-gradient-to-br from-indigo-900 via-blue-800 to-blue-600 h-screen w-screen"
         >
-          <div class="row-span-3"></div>
-          <h1 class="row-span-1 font-medium text-4xl">
-            Hi, my name is Robert.
-          </h1>
-          <h1 class="row-span-1 font-normal text-3xl">
-            I am a full-stack web developer and graphic designer.
-          </h1>
-          ${nav}
-        </div>
-      </main>
-     `);
-        $(".btn_nav").removeClass("active");
-        $(".homeLink").addClass("active");
-      }, 1600);
+          <div
+            class="introduction page_description grid grid-rows-6 grid-flow-col justify-center text-center gap-10 text-white"
+          >
+            <div class="row-span-3"></div>
+            <h1 class="row-span-1 font-medium text-4xl">
+              Hi, my name is Robert.
+            </h1>
+            <h1 class="row-span-1 font-normal text-3xl">
+              I am a full-stack web developer and graphic designer.
+            </h1>
+            ${nav}
+          </div>
+        </main>
+       `);
+          $(".btn_nav").removeClass("active");
+          $(".homeLink").addClass("active");
+        }, 1600);
+ 
     }
 
     // properties for about page
@@ -277,11 +278,11 @@ $(document).ready(function () {
       const aboutH3 = `text-xl font-semibold text-blue-900 pt-1 pb-4 text-xl`;
       const aboutContentCards = `col-span-7 h-auto rounded-lg shadow-lg text-blue-900 p-4`;
 
-      setTimeout(function () {
         if ($(".overlay")[0]) {
           $(".overlay").remove();
         }
-        $("main")
+        setTimeout(function () {
+          $("main")
           .addClass("from-blue-900 via-teal-400 to-teal-200")
           .removeClass(" from-indigo-900 via-blue-800 to-blue-600")
           .prepend(`<div class="overlay bg-local"></div>`);
@@ -322,7 +323,8 @@ $(document).ready(function () {
         $("nav").addClass("col-span-9");
         $(".btn_nav").removeClass("active");
         $(".aboutLink").addClass("active");
-      }, 1600);
+        }, 1600);
+
       setTimeout(function () {
         $("main").addClass("h-full").removeClass("h-screen");
       }, 3000);
@@ -331,9 +333,9 @@ $(document).ready(function () {
     // properties for contact page
     if (btnTxt == "Contact") {
       pageRender();
-      if ($(".overlay")[0]) {
-        $(".overlay").remove();
-      }
+        if ($(".overlay")[0]) {
+          $(".overlay").remove();
+        }
       setTimeout(function () {
         $("main")
           .addClass("from-purple-800 via-indigo-700 to-indigo-400")
