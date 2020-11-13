@@ -66,6 +66,22 @@ $(document).ready(function () {
     };
   })(jQuery);
 
+  // define pageRender function for animation
+  function pageRender() {
+    // animate content
+    $(".page_style").addClass("animate_content");
+    $(".page_description").fadeOut(100).delay(2800).fadeIn();
+
+    setTimeout(function () {
+      $(".page_style").removeClass("animate_content");
+    }, 3200);
+
+    //remove fadeIn class after 1500ms
+    setTimeout(function () {
+      $(".page__style").removeClass("fadeIn");
+    }, 1500);
+  };
+
   // calling typewriter callback
   $(".typewriter").typewrite({
     // on callback, insert button under text
@@ -78,22 +94,9 @@ $(document).ready(function () {
   $(document).on("click", ".btn_nav", function () {
     // grab the value of the button
     let btnTxt = $(this).text();
-
-    // animate content
-    $(".page_style").addClass("animate_content");
-    $(".page_description").fadeOut(100).delay(2800).fadeIn();
-
-    setTimeout(function () {
-      $(".page__style").removeClass("animate_content");
-    }, 3200);
-
-    //remove fadeIn class after 1500ms
-    setTimeout(function () {
-      $(".page__style").removeClass("fadeIn");
-    }, 1500);
-
     // properties for projects page
     if (btnTxt == "Projects") {
+      pageRender();
       // defining unique styles for project cards
       const projectCard = `col-span-1 bg-gray-100 w-auto h-auto mx-5 rounded-lg`;
 
@@ -144,6 +147,7 @@ $(document).ready(function () {
 
     // properties for skills page
     if (btnTxt == "Skills") {
+      pageRender();
       // defining unique in-line styles for skills cards
       const skillsCardStyles = `col-span-1 bg-gray-100 w-auto h-auto mx-5 p-10 rounded-lg`;
       const skillsCardH3 = `text-xl text-pink-800 font-semibold mt-4 p-3`;
@@ -238,6 +242,7 @@ $(document).ready(function () {
 
     // properties for home page
     if (btnTxt == "Home") {
+      pageRender();
       setTimeout(function () {
         if ($(".overlay")[0]) {
           $(".overlay").remove();
@@ -267,6 +272,7 @@ $(document).ready(function () {
 
     // properties for about page
     if (btnTxt == "About") {
+      pageRender();
       const aboutH2 = `text-2xl font-bold text-gray-100 pt-4 text-5xl`;
       const aboutH3 = `text-xl font-semibold text-blue-900 pt-1 pb-4 text-xl`;
       const aboutContentCards = `col-span-7 h-auto rounded-lg shadow-lg text-blue-900 p-4`;
@@ -324,6 +330,7 @@ $(document).ready(function () {
 
     // properties for contact page
     if (btnTxt == "Contact") {
+      pageRender();
       if ($(".overlay")[0]) {
         $(".overlay").remove();
       }
