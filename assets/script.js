@@ -237,7 +237,7 @@ $(document).ready(function () {
       }, 1600);
       setTimeout(function () {
         $("main").addClass("h-full").removeClass("h-screen");
-      }, 3250);
+      }, 3000);
     }
 
     // properties for home page
@@ -325,7 +325,7 @@ $(document).ready(function () {
       }, 1600);
       setTimeout(function () {
         $("main").addClass("h-full").removeClass("h-screen");
-      }, 3250);
+      }, 3000);
     }
 
     // properties for contact page
@@ -367,7 +367,7 @@ $(document).ready(function () {
       }, 1600);
       setTimeout(function () {
         $("main").addClass("h-full").removeClass("h-screen");
-      }, 3250);
+      }, 3000);
     }
   });
 });
