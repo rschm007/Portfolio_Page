@@ -11,7 +11,7 @@ Repository <a href="https://github.com/rschm007/Portfolio_Page">https://github.c
 Prerequisites
 -----------------------------
 
-To install this application you will need a text editor like Visual Studio Code. You will also need to install the Tailwindcss framework (https://tailwindcss.com/), PUG HTML compiler (https://pugjs.org/api/getting-started.html), and Sass CSS compiler (https://sass-lang.com/).
+To install this application you will need a text editor like Visual Studio Code. There are several NPM packages which you should be able to install with "npm install" in your CLI. You will also need to install the Tailwindcss framework (https://tailwindcss.com/), PUG HTML compiler (https://pugjs.org/api/getting-started.html), and Sass CSS compiler (https://sass-lang.com/).
 
 
 <img src="https://raw.githubusercontent.com/rschm007/Portfolio_Page/master/assets/imgs/portfolio_gif-1.gif" alt="Robert Schmahl Portfolio gif" style="max-width:100%;">
