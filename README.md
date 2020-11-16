@@ -26,7 +26,7 @@ Other features include:
   <li>Page render animations to enhance the UX</li>
   <li>Brief biography and picture of me</li>
   <li>Portfolio page that contains technical projects with animated gifs and links to deployed apps and Github repos/li>
-  <li>Functional contact page with Google Form that saves form content, as well as social media buttons/li>
+  <li>Functional contact page with Google Form that saves form content, as well as social media buttons</li>
   <li>Downloadable resume PDF</li>
 </ul>
 
@@ -37,6 +37,8 @@ Planned Future Features
   <li>Links to more technical projects as well as graphic design projects</li>
   <li>Tidy up animation functions</li>
   <li>About Me needs copy editing, as it ends rather weakly right now</li>
+  <li>Migrate contact form from Google Forms to custom form</li>
+  <li>Refactor code for DRY and upload portfolio to my own server and hosted URL</li>
 </ul>
 
 Authors
