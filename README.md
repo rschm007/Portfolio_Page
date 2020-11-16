@@ -6,7 +6,7 @@ Links
 -----------------------------
 Deployed <a href="https://rschm007.github.io/Portfolio_Page/html/index.html">https://rschm007.github.io/Portfolio_Page/html/index.html</a>
 <br>
-Repository <a href="https://github.com/rschm007/Portfolio_Page"></a>
+Repository <a href="https://github.com/rschm007/Portfolio_Page">https://github.com/rschm007/Portfolio_Page</a>
 
 Prerequisites
 -----------------------------
