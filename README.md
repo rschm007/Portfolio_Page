@@ -37,6 +37,7 @@ Planned Future Features
   <li>Links to more technical projects as well as graphic design projects</li>
   <li>Tidy up animation functions</li>
   <li>About Me needs copy editing, as it ends rather weakly right now</li>
+  <li>Current resume is one of my outdated marketing-specific resumes. This needs to be changed.</li>
   <li>Migrate contact form from Google Forms to custom form</li>
   <li>Refactor code for DRY and upload portfolio to my own server and hosted URL</li>
 </ul>
