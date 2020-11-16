@@ -25,7 +25,7 @@ Other features include:
   <li>Navbar links to navigate between content pages</li>
   <li>Page render animations to enhance the UX</li>
   <li>Brief biography and picture of me</li>
-  <li>Portfolio page that contains technical projects with animated gifs and links to deployed apps and Github repos/li>
+  <li>Portfolio page that contains technical projects with animated gifs and links to deployed apps and Github repos</li>
   <li>Functional contact page with Google Form that saves form content, as well as social media buttons</li>
   <li>Downloadable resume PDF</li>
 </ul>
