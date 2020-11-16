@@ -5,6 +5,7 @@ Robert Schmahl Portfolio Page
 Links
 -----------------------------
 Deployed <a href="https://rschm007.github.io/Portfolio_Page/html/index.html">https://rschm007.github.io/Portfolio_Page/html/index.html</a>
+<br>
 Repository <a href="https://github.com/rschm007/Portfolio_Page"></a>
 
 Prerequisites
@@ -13,7 +14,7 @@ Prerequisites
 To install this application you will need a text editor like Visual Studio Code. You will also need to install the Tailwindcss framework (https://tailwindcss.com/), PUG HTML compiler (https://pugjs.org/api/getting-started.html), and Sass CSS compiler (https://sass-lang.com/).
 
 
-<img src="https://github.com/rschm007/Weather-Dashboard/blob/main/Assets/Demo%20Images/demo-1.png?raw=true" alt="Weather Dashboard Demo Image" style="max-width:100%;">
+<img src="https://raw.githubusercontent.com/rschm007/Portfolio_Page/master/assets/imgs/portfolio_gif-1.gif" alt="Robert Schmahl Portfolio gif" style="max-width:100%;">
 
 
 Features
