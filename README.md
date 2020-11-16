@@ -34,6 +34,7 @@ Planned Future Features
 • Enhanced mobile responsiveness & media queries
 • Links to more technical projects as well as graphic design projects
 • Tidy up animation functions
+• About Me needs copy editing, as it ends rather weakly right now
 
 
 Authors
