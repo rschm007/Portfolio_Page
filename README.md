@@ -19,34 +19,38 @@ To install this application you will need a text editor like Visual Studio Code.
 
 Features
 -----------------------------
-This site was developed with Tailwindcss, Pug and Sass. It incorporates a grid system to create a responsive layout. Items hat would normally display in multiple columns should display as a single column on smaller screens.
+This site was developed with Tailwindcss, Pug and Sass. It incorporates a grid system to create a responsive layout. Items that would normally display in multiple columns should display as a single column on smaller screens.
 
 Other features include:
-• Navbar links to navigate between content pages
-• Page render animations to enhance the UX
-• Brief biography and picture of me
-• Portfolio page that contains technical projects with animated gifs and links to deployed apps and Github repos
-• Functional contact page with Google Form that saves form content, as well as social media buttons
-• Downloadable resume PDF
+<ul>
+  <li>Navbar links to navigate between content pages</li>
+  <li>Page render animations to enhance the UX/li>
+  <li>Brief biography and picture of me/li>
+  <li>Portfolio page that contains technical projects with animated gifs and links to deployed apps and Github repos/li>
+  <li>Functional contact page with Google Form that saves form content, as well as social media buttons/li>
+  <li>Downloadable resume PDF/li>
+</ul>
 
 Planned Future Features
 -----------------------------
-• Enhanced mobile responsiveness & media queries
-• Links to more technical projects as well as graphic design projects
-• Tidy up animation functions
-• About Me needs copy editing, as it ends rather weakly right now
-
+<ul>
+  <li>Enhanced mobile responsiveness & media queries</li>
+  <li>Links to more technical projects as well as graphic design projects</li>
+  <li>Tidy up animation functions</li>
+  <li>About Me needs copy editing, as it ends rather weakly right now</li>
+</ul>
 
 Authors
 -----------------------------
-• Robert Schmahl - <a href="https://github.com/rschm007">GitHub Profile</a>
-<br>
-• UC Irvine Full Stack Web Development
-<br>
+<ul>
+  <li>Robert Schmahl - <a href="https://github.com/rschm007">GitHub Profile</a></li>
+</ul>
 
 Acknowledgements
 -----------------------------
-• UC Irvine Web Development program for providing project requirements and code examples
-• Wilmai at codepen.io for this awesome page render animation: https://codepen.io/wilmai/pen/MvejPb
-• Chad Selph for the jQuery typewriter I forked: https://github.com/chadselph/jquery-typewriter
+<ul>
+  <li>UC Irvine Web Development program for providing project requirements and code examples</li>
+  <li>Wilmai at codepen.io for this awesome page render animation: <a href="https://codepen.io/wilmai/pen/MvejPb">https://codepen.io/wilmai/pen/MvejPb</a></li>
+  <li>Chad Selph for the jQuery typewriter I forked: <a href="https://github.com/chadselph/jquery-typewriter">https://github.com/chadselph/jquery-typewriter</a></li>
+</ul>
 
