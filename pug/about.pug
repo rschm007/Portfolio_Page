@@ -1,0 +1,30 @@
+//- define styles for this page
+- const contentStyles1 = `bg-gray-100 flex-wrap rounded-lg shadow-lg text-blue-900 p-4 mx-auto`;
+- const contentStyles2 = `flex-wrap text-center text-2xl font-extrabold text-blue-900 p-4 mx-auto`;
+- const pStyles = `mt-2 p-2`;
+
+doctype html
+html(lang='en')
+    head
+      title Robert Schmahl
+      include includes/head
+    body
+      main.wrapper(id =`page_style` class=`bg-gradient-to-br from-blue-900 via-teal-400 to-teal-200 h-auto w-auto`)
+        .overlay(class=`bg-local w-full`)
+        .page_description(class="flex flex-col")
+          include includes/nav
+          header.aboutHeader(class=`text-center flex-wrap p-5`)
+            h2(class=`text-2xl font-bold text-gray-100 pt-4 text-5xl`) Who is Robert Schmahl?
+            h3(class=`text-xl font-semibold text-blue-900 pt-1 pb-4 text-xl pb-4`) Or, How I Learned to Stop Worrying and Love the Process
+          .aboutContent(class=`${contentStyles1}`)
+            p(class=`${pStyles}`) I am a full-stack web developer, graphic designer, professional aquarist and hobbyist woodworker. I am currently living in Irvine, CA. I earned my degree in Political Science from UC Riverside and then signed up with AmeriCorps to begin an illustrious career in politics.
+          .aboutContent(class=`${contentStyles2}`)
+            p(class=`${pStyles}`) Spoiler Alert: I am no longer working in politics
+          .aboutContent(class=`${contentStyles1}`)
+            p(class=`${pStyles}`) Turns out, I am much more of a creative than a politician. It wasn't all a loss, though; during my time in national service I discovered a knack for graphic design. So after completing my tour I decided I would make a go at being a professional artist. After a short misadventure working as a fishmonger I landed a steady gig as a graphic designer at a live theatre. Suddenly, I was living the dream! I was being paid to be creative, and I even got free show tickets!
+          .aboutContent(class=`${contentStyles2}`)
+            p(class=`${pStyles}`) Then, COVID-19
+          .aboutContent(class=`${contentStyles1}`)
+            p(class=`${pStyles}`) Like many people, I was suddenly without a job. After thinking hard about what I wanted from my career, I decided to attend the UCI Full Stack Flex Bootcamp. As a web developer I've found that my design sensibilities, love for creation, and passion-driven work ethic have given me a great excitement in this field.
+          .aboutContent(class=`${contentStyles2}`)
+            p(class=`${pStyles}`) Let's make something great together.

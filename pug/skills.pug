@@ -1,0 +1,90 @@
+//- define styles for this page
+- const resumeDownload = `flex-initial text-center bg-gray-100 mx-auto rounded-lg`;
+- const skillsCardStyles = `flex-shrink text-center justify-center bg-gray-100 mx-auto p-10 rounded-lg`;
+- const skillsIconStyles = `fa-3x text-pink-800 font-semibold mt-4`;
+- const h2Styles = `text-2xl font-bold mt-4 p-2`;
+- const h3Styles = `text-xl text-pink-800 font-semibold mt-4 p-3`;
+- const pStyles = `mt-2 p-2`;
+
+doctype html
+html(lang='en')
+    head
+      title Robert Schmahl
+      include includes/head
+      style.
+            .resumeAnimation {
+                position: relative;
+                overflow: hidden;
+                width: 25%;
+            }
+            
+            .resumeDwnload {
+                position: fixed;
+                width: 25%;
+                left: -25%;
+                margin-top: 5%;
+                padding-left: 4%;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+                -webkit-animation: slide 0.5s forwards;
+                -webkit-animation-delay: 2s;
+                animation: slide 0.5s forwards;
+                animation-delay: 2s;
+            }
+            
+            @-webkit-keyframes slide {
+                100% { left: -2%; }
+            }
+
+            @keyframes slide {
+                100% { left: -2%; }
+            }
+    body
+      main.wrapper(id=`page_style` class=`flex flex-col bg-gradient-to-br from-orange-700 via-orange-500 to-yellow-400 h-auto w-auto p-10`)
+        .page_description(class=`flex flex-col`)
+          include includes/nav
+          include includes/resume
+          //- include includes/resume
+          .skills(class="flex flex-wrap mt-20 ml-32 mr-32")
+            .skillCard(class=`${skillsCardStyles}`)
+              i(class=`fas fa-cogs ${skillsIconStyles}`)
+              h2(class=`${h2Styles}`) Developer
+              p(class=`${pStyles}`) I am a full-stack web developer, able to tackle projects from front-end to back-end.
+              h3(class=`${h3Styles}`) Dev Tools & Languages:
+              dl
+                dt  HTML/Pug
+                dt  CSS/Sass
+                dt  Javascript
+                dt  Bootstrap
+                dt  Tailwindcss
+                dt  Node
+                dt  Visual Studio Code
+                dt  Github
+                dt  Terminal
+            .skillCard(class=`${skillsCardStyles}`)
+              i(class=`fas fa-pencil-ruler ${skillsIconStyles}`)
+              h2(class=`${h2Styles}`) Designer
+              p(class=`${pStyles}`) I strive to create elegant designs that create impactful user interactions.
+              h3(class=`${h3Styles}`) Things I love to design:
+              dl
+                dt UX, UI
+                dt Logos
+                dt Posters
+                dt Social Media Images
+                dt Web
+                dt Mobile
+                dt Apps
+                dt Storefronts
+            .skillCard(class=`${skillsCardStyles}`)
+              i(class=`fas fa-users ${skillsIconStyles}`)
+              h2(class=`${h2Styles}`) Collaborator
+              p(class=`${pStyles}`) I love working in teams, and I draw upon diverse experiences to inform my collaborating.
+              h3(class=`${h3Styles}`) Experiences I draw from:
+              dl
+                dt 2+ years government experience
+                dt 3+ years web development
+                dt 4+ years graphic design
+                dt 4+ years small business owner
+                dt 4+ years event coordination
+                dt 4+ years web design
+                dt 6+ years photography
+                dt 8+ years customer service

@@ -1,0 +1,45 @@
+//- define styles for this page
+- const projectCard = `flex-initial text-center bg-gray-100 mx-auto rounded-lg`;
+- const h2Styles = `text-2xl font-bold mt-4 p-2`;
+- const h3Styles = `font-normal p-2 mb-4`;
+- const hoverEnlarge = `duration-500 ease-in-out hover:-translate-y-1 transform hover:scale-120`;
+
+doctype html
+html(lang='en')
+    head
+      title Robert Schmahl
+      include includes/head
+    body
+      main.wrapper(id =`page_style` class=`flex flex-col bg-gradient-to-br from-green-900 via-green-600 to-teal-600 h-auto w-auto p-10`)
+        .page_description(class="flex flex-col")
+          include includes/nav
+          .projects(class="flex flex-wrap mt-20 px-auto")
+            .project(class=`${projectCard}`)
+              h2(class=`${h2Styles}`) Babel
+              h3(class=`${h3Styles}`) Generates recipes based off of desired ingredients
+              a(href=`https://https-github-com-steversontong.github.io/Recipe-Generatorf/`)
+                img(src=`../../assets/imgs/webdevo_gif1.gif` alt=`An animated gif of the Recipe Generator web app`)
+              a(href=`https://https-github-com-steversontong.github.io/Recipe-Generatorf/`)
+                i(class=`fas fa-link fa-2x m-2 p-2 ${hoverEnlarge}`)
+              a(href=`https://github.com/https-github-com-steversonTong/Recipe-Generatorf`)
+                i(class=`fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}`)
+            
+            .project(class=`${projectCard}`)
+              h2(class=`${h2Styles}`) Day Planner
+              h3(class=`${h3Styles}`) Plan your day and track the current time
+              a(href=`https://rschm007.github.io/Day-Planner/`)
+                img(src=`../../assets/imgs/webdevo_gif2.gif` alt=`An animated gif of the Day Planner web app`)
+                a(href=`https://rschm007.github.io/Day-Planner/`)
+                  i(class=`fas fa-link fa-2x m-2 p-2 ${hoverEnlarge}`)
+                a(href=`https://github.com/rschm007/Day-Planner`)
+                  i(class=`fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}`)
+            
+            .project(class=`${projectCard}`)
+              h2(class=`${h2Styles}`) Weather Dashboard
+              h3(class=`${h3Styles}`) Use the OpenWeatherAPI to search forecasts
+              a(href=`https://rschm007.github.io/Weather-Dashboard/`)
+                img(src=`../../assets/imgs/webdevo_gif3.gif` alt=`An animated gif of the Weather Dashboard web app`)
+                a(href=`https://rschm007.github.io/Weather-Dashboard/`)
+                  i(class=`fas fa-link fa-2x m-2 p-2 ${hoverEnlarge}`)
+                a(href=`https://github.com/rschm007/Weather-Dashboard`)
+                  i(class=`fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}`)
