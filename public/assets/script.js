@@ -83,56 +83,6 @@ $(document).ready(function () {
 
   // add animation function
   $(document).on("click", ".btn_nav", function () {
-    // grab the value of the button
-    let btnTxt = $(this).text();
-    // properties for projects page
-    if (btnTxt == "Projects") {
-      pageRender();
-
-      setTimeout(function () {
-        $(".btn_nav").removeClass("active");
-        $(".projectsLink").addClass("active");
-      }, 3200);
-    }
-
-    // properties for skills page
-    if (btnTxt == "Skills") {
-      pageRender();
-
-      setTimeout(function () {
-        $(".btn_nav").removeClass("active");
-        $(".skillsLink").addClass("active");
-      }, 3200);
-    }
-
-    // properties for home page
-    if (btnTxt == "Home") {
-      pageRender();
-
-      setTimeout(function () {
-        $(".btn_nav").removeClass("active");
-        $(".homeLink").addClass("active");
-      }, 3200);
-    }
-
-    // properties for about page
-    if (btnTxt == "About") {
-      pageRender();
-
-      setTimeout(function () {
-        $(".btn_nav").removeClass("active");
-        $(".aboutLink").addClass("active");
-      }, 3200);
-    }
-
-    // properties for contact page
-    if (btnTxt == "Contact") {
-      pageRender();
-
-      setTimeout(function () {
-        $(".btn_nav").removeClass("active");
-        $(".contactLink").addClass("active");
-      }, 3200);
-    }
+    pageRender();
   });
 });
