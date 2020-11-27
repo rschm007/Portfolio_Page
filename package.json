@@ -2,7 +2,7 @@
   "name": "portfolio_page",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,5 +11,9 @@
   "devDependencies": {
     "tailwindcss": "^1.9.6"
   },
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "pug": "^3.0.0"
+  }
 }
