@@ -1,6 +1,5 @@
 // DEPENDENCIES
 const express = require("express");
-const path = require("path");
 
 // EXPRESS CONFIGURATION
 
@@ -11,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 // render static files
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static('public')); 
 
 // set view engine
 app.set('view engine', 'pug');
