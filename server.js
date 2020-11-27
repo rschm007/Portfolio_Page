@@ -1,5 +1,6 @@
 // DEPENDENCIES
 const express = require("express");
+const path = require("path");
 
 // EXPRESS CONFIGURATION
 
@@ -10,7 +11,10 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 // render static files
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, '/public')));
+
+// set view engine
+app.set('view engine', 'pug');
 
 // start server listening
 app.listen(PORT, function() {
@@ -20,25 +24,25 @@ app.listen(PORT, function() {
 // ** GET ROUTES  - Display Pages
 // root route
 app.get('/', function (req, res) {
-  res.render('public/index.html')
+  res.render('public/index')
 });
 
 // about route
 app.get('/about', function (req, res) {
-  res.render('public/about.html')
+  res.render('public/about')
 });
 
 // contact route
 app.get('/contact', function (req, res) {
-  res.render('public/contact.html')
+  res.render('public/contact')
 });
 
 // projects route
 app.get('/projects', function (req, res) {
-  res.render('public/projects.html')
+  res.render('public/projects')
 });
 
 // about route
 app.get('/about', function (req, res) {
-  res.render('public/skills.html')
+  res.render('public/skills')
 });

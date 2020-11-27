@@ -1,6 +1,3 @@
-// dependencies
-// const path = require("path");
-
 // defining a nav constant to append after typewriter function
 const nav = `<nav class='flex flex-wrap content-start mt-20 mx-auto'>
 <a href='./index.html' class="btn_nav fadeIn homeLink text-xl mx-5 px-4 py-3 rounded-lg active" type="button">Home</a>
