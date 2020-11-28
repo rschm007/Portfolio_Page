@@ -7,7 +7,6 @@ const nav = `<nav class='flex flex-wrap content-start mt-20 mx-auto'>
 <a href='./contact.html' class="btn_nav fadeIn contactLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Contact</a>
 </nav>
 `;
-
 $(document).ready(function () {
   // defining typewrite function
   (function ($) {
