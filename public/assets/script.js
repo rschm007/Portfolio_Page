@@ -80,9 +80,4 @@ $(document).ready(function () {
       $(".introduction").append(nav);
     },
   });
-
-  // add animation function
-  $(document).on("click", ".btn_nav", function () {
-    pageRender();
-  });
 });
