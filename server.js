@@ -7,7 +7,7 @@ const express = require("express");
 const app = express();
 
 // Sets an initial port. We"ll use this later in our listener
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3001;
 
 // render static files
 app.use(express.static("public"));

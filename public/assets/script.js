@@ -1,3 +1,34 @@
+// // barba import
+// import barba from '@barba/core';
+
+// // GSAP page transition
+// function pageTransition() {
+//   let tl = gsap.timeline();
+//   tl.to('main', { duration: .5, scaleY: })
+// }
+
+// // define delay function for async promise interval 
+// function delay(interval) {
+//   interval = interval || 2000;  
+//   return new Promise(done => {
+//     setTimeout(() => {
+//       done();
+//     }, interval)
+//   });
+// }
+
+// barba.init({
+//   sync: true,
+//   transitions: [{
+//     async leave(data) {
+//       const done = this.async();
+//       pageTransition();
+//       await delay(1500);
+//       done();
+//     }
+//   }]
+// });
+
 // defining a nav constant to append after typewriter function
 const nav = `<nav class='flex flex-wrap content-start mt-20 mx-auto'>
 <a href='./index.html' class="btn_nav fadeIn homeLink text-xl mx-5 px-4 py-3 rounded-lg active" type="button">Home</a>
@@ -48,29 +79,6 @@ $(document).ready(function () {
       return this;
     };
   })(jQuery);
-
-  // define pageRender function for animation
-  function pageRender() {
-    // animate content
-    $("#page_style").addClass("animate_content");
-    $(".page_description").fadeOut(100).delay(2800).fadeIn();
-
-    setTimeout(function () {
-      // set page_description as invisible
-      $(".page_description").addClass("invisible");
-    }, 2800);
-
-    setTimeout(function () {
-      // end animation
-      $("#page_style").removeClass("animate_content");
-      $(".page_description").addClass("visible").removeClass("invisible");
-    }, 3200);
-
-    //remove fadeIn class after 1500ms
-    setTimeout(function () {
-      $("#page_style").removeClass("fadeIn");
-    }, 1500);
-  }
 
   // calling typewriter callback
   $(".typewriter").typewrite({
