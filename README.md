@@ -6,7 +6,7 @@ Check out the badges hosted by [shields.io](https://shields.io/).
 
 Links
 -----------------------------
-Deployed <a href="https://rschm007.github.io/Portfolio_Page/html/index.html">https://rschm007.github.io/Portfolio_Page/html/index.html</a>
+Deployed <a href="https://morning-shelf-13203.herokuapp.com/index.html">https://morning-shelf-13203.herokuapp.com/index.html</a>
 <br>
 Repository <a href="https://github.com/rschm007/Portfolio_Page">https://github.com/rschm007/Portfolio_Page</a>
 
@@ -18,7 +18,7 @@ To install this application you will need a text editor like Visual Studio Code.
 
 Features
 -----------------------------
-This site was developed with Tailwindcss, Pug and Sass. It incorporates a grid system to create a responsive layout. Items that would normally display in multiple columns should display as a single column on smaller screens.
+This site was developed with Tailwindcss, Pug and Sass. It incorporates flexbox to create a responsive layout. Items that would normally display in multiple columns should display as a single column on smaller screens.
 
 <img src="https://raw.githubusercontent.com/rschm007/Portfolio_Page/master/assets/imgs/portfolio_gif-1.gif" alt="Robert Schmahl Portfolio gif" style="max-width:100%;">
 
@@ -39,9 +39,9 @@ Planned Future Features
   <li>Links to more technical projects as well as graphic design projects</li>
   <li>Tidy up animation functions</li>
   <li>About Me needs copy editing, as it ends rather weakly right now</li>
-  <li>Current resume is one of my outdated marketing-specific resumes. This needs to be changed.</li>
+  <li><strike>Current resume is one of my outdated marketing-specific resumes. This needs to be changed.</strike> Accomplished 11/28/2020</li>
   <li>Migrate contact form from Google Forms to custom form</li>
-  <li>Refactor code for DRY and upload portfolio to my own server and hosted URL</li>
+  <li><strike>Refactor code for DRY and upload portfolio to my own server and hosted URL</strike> Accomplished 11/28/2020</li>
 </ul>
 
 Authors
