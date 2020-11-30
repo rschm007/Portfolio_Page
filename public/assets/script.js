@@ -1,41 +1,10 @@
-// // barba import
-// import barba from '@barba/core';
-
-// // GSAP page transition
-// function pageTransition() {
-//   let tl = gsap.timeline();
-//   tl.to('main', { duration: .5, scaleY: })
-// }
-
-// // define delay function for async promise interval 
-// function delay(interval) {
-//   interval = interval || 2000;  
-//   return new Promise(done => {
-//     setTimeout(() => {
-//       done();
-//     }, interval)
-//   });
-// }
-
-// barba.init({
-//   sync: true,
-//   transitions: [{
-//     async leave(data) {
-//       const done = this.async();
-//       pageTransition();
-//       await delay(1500);
-//       done();
-//     }
-//   }]
-// });
-
 // defining a nav constant to append after typewriter function
 const nav = `<nav class='flex flex-wrap content-start mt-20 mx-auto'>
-<a href='./index.html' class="btn_nav fadeIn homeLink text-xl mx-5 px-4 py-3 rounded-lg active" type="button">Home</a>
-<a href='./projects.html' class="btn_nav fadeIn projectsLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Projects</a>
-<a href='./skills.html' class="btn_nav fadeIn skillsLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Skills</a>
-<a href='./about.html' class="btn_nav fadeIn aboutLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">About</a>
-<a href='./contact.html' class="btn_nav fadeIn contactLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Contact</a>
+ <button class="btn_nav fadeIn homeLink text-xl mx-5 px-4 py-3 rounded-lg active" type="button">Home</button>
+ <button class="btn_nav fadeIn projectsLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Projects</button>
+ <button class="btn_nav fadeIn skillsLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Skills</button>
+ <button class="btn_nav fadeIn aboutLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">About</button>
+ <button class="btn_nav fadeIn contactLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Contact</button>
 </nav>
 `;
 $(document).ready(function () {
@@ -87,4 +56,60 @@ $(document).ready(function () {
       $(".introduction").append(nav);
     },
   });
+
+
+  $('.btn_nav').click(function() {
+    // animate content
+    $('.page__style').addClass('animate_content');
+    $('.page__description').fadeOut(100).delay(2800).fadeIn();
+  
+    setTimeout(function() {
+      $('.page__style').removeClass('animate_content');
+    }, 3200);
+  
+    //remove fadeIn class after 1500ms
+    setTimeout(function() {
+      $('.page__style').removeClass('fadeIn');
+    }, 1500);
+  
+  });
+  
+  // nav button logic
+  // on click show page after 1500ms
+  $(document).on('click', '.homeLink', function() {
+    console.log('home')
+    setTimeout(function() {
+      location.href = "/index";
+    }, 1500);
+  });
+  
+  $(document).on('click', '.projectsLink', function() {
+    console.log('projects')
+    setTimeout(function() {
+      location.href = "/projects";
+    }, 1500);
+  });
+  
+  $(document).on('click', '.skillsLink', function() {
+    console.log('skills')
+    setTimeout(function() {
+      location.href = "/skills";
+    }, 1500);
+  });
+  
+  $(document).on('click', '.aboutLink', function() {
+    console.log('about')
+    setTimeout(function() {
+      location.href = "/about";
+    }, 1500);
+  });
+  
+  $(document).on('click', '.contactLink', function() {
+    console.log('contact')
+    setTimeout(function() {
+      location.href = "/contact";
+    }, 1500);
+  });
+
 });
+
