@@ -7,7 +7,7 @@ const express = require("express");
 const app = express();
 
 // Sets an initial port. We"ll use this later in our listener
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 
 // render static files
 app.use(express.static("public"));
@@ -15,33 +15,38 @@ app.use(express.static("public"));
 // set view engine
 app.set("view engine", "pug");
 
-// start server listening
-app.listen(PORT, function () {
-  console.log("App listening on PORT: " + PORT);
-});
-
 // ** GET ROUTES  - Display Pages
 // root route
 app.get("/", function (req, res) {
-  res.render("public/index");
+  res.render("index");
+});
+
+// index route
+app.get("/home", function (req, res) {
+  res.render("index");
 });
 
 // about route
 app.get("/about", function (req, res) {
-  res.render("public/about");
+  res.render("about");
 });
 
 // contact route
 app.get("/contact", function (req, res) {
-  res.render("public/contact");
+  res.render("contact");
 });
 
 // projects route
 app.get("/projects", function (req, res) {
-  res.render("public/projects");
+  res.render("projects");
 });
 
 // about route
 app.get("/skills", function (req, res) {
-  res.render("public/skills");
+  res.render("skills");
+});
+
+// start server listening
+app.listen(PORT, function () {
+  console.log("App listening on PORT: " + PORT);
 });

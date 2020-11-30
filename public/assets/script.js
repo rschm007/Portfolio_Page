@@ -1,10 +1,10 @@
 // defining a nav constant to append after typewriter function
 const nav = `<nav class='flex flex-wrap content-start mt-20 mx-auto'>
- <button class="btn_nav fadeIn homeLink text-xl mx-5 px-4 py-3 rounded-lg active" type="button">Home</button>
- <button class="btn_nav fadeIn projectsLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Projects</button>
- <button class="btn_nav fadeIn skillsLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Skills</button>
- <button class="btn_nav fadeIn aboutLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">About</button>
- <button class="btn_nav fadeIn contactLink text-xl mx-5 px-4 py-3 rounded-lg" type="button">Contact</button>
+ <button id="home" class="btn_nav text-xl mx-5 px-4 py-3 rounded-lg active" type="button">Home</button>
+ <button id="projects" class="btn_nav text-xl mx-5 px-4 py-3 rounded-lg" type="button">Projects</button>
+ <button id="skills" class="btn_nav text-xl mx-5 px-4 py-3 rounded-lg" type="button">Skills</button>
+ <button id="about" class="btn_nav text-xl mx-5 px-4 py-3 rounded-lg" type="button">About</button>
+ <button id="contact" class="btn_nav text-xl mx-5 px-4 py-3 rounded-lg" type="button">Contact</button>
 </nav>
 `;
 $(document).ready(function () {
@@ -57,59 +57,32 @@ $(document).ready(function () {
     },
   });
 
-
-  $('.btn_nav').click(function() {
+  // pageRender function that holds animation properties
+  function pageRender(linkVal) {
     // animate content
-    $('.page__style').addClass('animate_content');
-    $('.page__description').fadeOut(100).delay(2800).fadeIn();
-  
-    setTimeout(function() {
-      $('.page__style').removeClass('animate_content');
+    $("#page_style").addClass("animate_content");
+    $(".page_description").fadeOut(100).delay(2800).fadeIn();
+
+    // render page content
+    setTimeout(function () {
+      location.href = `${linkVal}`;
+    }, 1700);
+
+    setTimeout(function () {
+      $("#page_style").removeClass("animate_content");
     }, 3200);
-  
+
     //remove fadeIn class after 1500ms
-    setTimeout(function() {
-      $('.page__style').removeClass('fadeIn');
+    setTimeout(function () {
+      $("#page_style").removeClass("fadeIn");
     }, 1500);
-  
-  });
-  
+  }
+
   // nav button logic
   // on click show page after 1500ms
-  $(document).on('click', '.homeLink', function() {
-    console.log('home')
-    setTimeout(function() {
-      location.href = "/index";
-    }, 1500);
+  $(document).on("click", ".btn_nav", function () {
+    let linkVal = $(this).attr('id');
+    console.log(linkVal);
+    pageRender(linkVal);
   });
-  
-  $(document).on('click', '.projectsLink', function() {
-    console.log('projects')
-    setTimeout(function() {
-      location.href = "/projects";
-    }, 1500);
-  });
-  
-  $(document).on('click', '.skillsLink', function() {
-    console.log('skills')
-    setTimeout(function() {
-      location.href = "/skills";
-    }, 1500);
-  });
-  
-  $(document).on('click', '.aboutLink', function() {
-    console.log('about')
-    setTimeout(function() {
-      location.href = "/about";
-    }, 1500);
-  });
-  
-  $(document).on('click', '.contactLink', function() {
-    console.log('contact')
-    setTimeout(function() {
-      location.href = "/contact";
-    }, 1500);
-  });
-
 });
-
