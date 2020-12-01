@@ -13,14 +13,13 @@ html(lang='en')
       include includes/head
     body
       main.wrapper(id =`page_style` class=`fadeIn flex flex-col bg-gradient-to-br from-purple-800 via-indigo-700 to-indigo-400 h-auto w-auto p-10`)
-        .page_description(class="flex flex-col")
-          include includes/nav
-          .wrapper(class="flex flex-wrap mt-20 mx-auto px-auto")
-            iframe(src="https://docs.google.com/forms/d/e/1FAIpQLSdPRB1YR4bfALbPptVAUAsYcGRWLpsgmQ_AsvHbNk6xTerFbg/viewform?embedded=true" class="flex-initial bg-gray-100 rounded-lg shadow-lg" width="520" scrolling="no" height="720" frameborder="0" marginheight="0" marginwidth="0") Loading...
-            .contactButtons(class="flex-initial ml-10")
-                include includes/resume
-                    a(href="https://www.linkedin.com/in/robert-schmahl/" class="linkedin" target="_blank")
-                        i(class=`fab fa-linkedin fa-7x p-4  ${hoverEnlarge} text-white`)
-                    
-                    a(href="https://github.com/rschm007" class="github" target="_blank")
-                        i(class=`fab fa-github-square fa-7x p-4 ${hoverEnlarge} text-white`)
+        include includes/nav
+        .wrapper(class="flex flex-wrap mt-20 mx-auto px-auto")
+          iframe(src="https://docs.google.com/forms/d/e/1FAIpQLSdPRB1YR4bfALbPptVAUAsYcGRWLpsgmQ_AsvHbNk6xTerFbg/viewform?embedded=true" class="flex-initial bg-gray-100 rounded-lg shadow-lg" width="520" scrolling="no" height="720" frameborder="0" marginheight="0" marginwidth="0") Loading...
+          .contactButtons(class="flex-initial ml-10")
+              include includes/resume
+                  a(href="https://www.linkedin.com/in/robert-schmahl/" class="linkedin" target="_blank")
+                      i(class=`fab fa-linkedin fa-7x p-4  ${hoverEnlarge} text-white`)
+                  
+                  a(href="https://github.com/rschm007" class="github" target="_blank")
+                      i(class=`fab fa-github-square fa-7x p-4 ${hoverEnlarge} text-white`)

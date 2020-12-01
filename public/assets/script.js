@@ -7,7 +7,9 @@ const nav = `<nav class='flex flex-wrap content-start mt-20 mx-auto'>
  <button id="contact" class="btn_nav text-xl mx-5 px-4 py-3 rounded-lg" type="button">Contact</button>
 </nav>
 `;
+
 $(document).ready(function () {
+  $(".loader").removeClass("loader--active").addClass("invisible");
   // defining typewrite function
   (function ($) {
     $.fn.typewrite = function (options) {
@@ -59,30 +61,16 @@ $(document).ready(function () {
 
   // pageRender function that holds animation properties
   function pageRender(linkVal) {
-    // animate content
-    $("#page_style").addClass("animate_content");
-    $(".page_description").fadeOut(100).delay(2800).fadeIn();
-
     // render page content
-    setTimeout(function () {
+    // setTimeout(function () {
       location.href = `${linkVal}`;
-    }, 1700);
-
-    setTimeout(function () {
-      $("#page_style").removeClass("animate_content");
-    }, 3200);
-
-    //remove fadeIn class after 1500ms
-    setTimeout(function () {
-      $("#page_style").removeClass("fadeIn");
-    }, 1500);
+    // }, 1500);
   }
 
   // nav button logic
-  // on click show page after 1500ms
   $(document).on("click", ".btn_nav", function () {
-    let linkVal = $(this).attr('id');
-    console.log(linkVal);
+    let linkVal = $(this).attr("id");
+    // render page
     pageRender(linkVal);
   });
 });
