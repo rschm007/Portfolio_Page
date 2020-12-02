@@ -9,8 +9,9 @@ html(lang='en')
     head
       title Robert Schmahl
       include includes/head
-    body
-      main.wrapper(id =`page_style` class=`fadeIn bg-gradient-to-br from-blue-900 via-teal-400 to-teal-200 h-auto w-auto`)
+    body(data-barba="wrapper")
+      include includes/transition
+      main.wrapper(data-barba="container" data-barba-namespace="about" class=`bg-gradient-to-br from-blue-900 via-teal-400 to-teal-200 h-auto w-auto`)
         .overlay(class=`bg-local w-full`)
         .page_description(class="flex flex-col")
           include includes/nav

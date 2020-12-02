@@ -13,9 +13,10 @@
     "tailwindcss": "^1.9.6"
   },
   "dependencies": {
+    "@barba/core": "^2.9.7",
     "express": "^4.17.1",
+    "gsap": "^3.5.1",
     "path": "^0.12.7",
-    "pug": "^3.0.0",
-    "swup": "^2.0.12"
+    "pug": "^3.0.0"
   }
 }

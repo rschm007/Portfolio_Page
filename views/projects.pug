@@ -10,47 +10,49 @@ html(lang='en')
     head
       title Robert Schmahl
       include includes/head
-    body
-      main.wrapper(id =`page_style` class=`fadeIn flex flex-col bg-gradient-to-br from-green-900 via-green-600 to-teal-400 h-auto w-auto p-10`)
-        include includes/nav
-        .projects(class="flex flex-wrap mt-20 px-auto")
-          .project(class=`${projectCard}`)
-            h2(class=`${h2Styles}`) Team Template Generator
-            h3(class=`${h3Styles}`) Build a custom team page with this CLI app
-            a(href=`https://github.com/rschm007/Team_Template_Generator` target="_blank")
-              img(src=`./assets/imgs/webdevo_gif4.gif` alt=`An animated gif of the Team Template Generator web app`)
-            a(href=`https://github.com/rschm007/Team_Template_Generator` target="_blank")
-              i(class=`fas fa-code-branch fa-3x m-2 p-2 ${hoverEnlarge}`)
-            a(href=`https://rschm007.github.io/Team_Template_Generator/Develop/output/team.html` target="_blank")
-              i(class=`fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}`)
-          
-          .project(class=`${projectCard}`)
-            h2(class=`${h2Styles}`) Babel
-            h3(class=`${h3Styles}`) Generates recipes from inputted ingredients
-            a(href=`https://https-github-com-steversontong.github.io/Recipe-Generatorf/` target="_blank")
-              img(src=`./assets/imgs/webdevo_gif1.gif` alt=`An animated gif of the Recipe Generator web app`)
-            a(href=`https://https-github-com-steversontong.github.io/Recipe-Generatorf/` target="_blank")
-              i(class=`fas fa-code-branch fa-3x m-2 p-2 ${hoverEnlarge}`)
-            a(href=`https://github.com/https-github-com-steversonTong/Recipe-Generatorf` target="_blank")
-              i(class=`fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}`)
-          
-          .project(class=`${projectCard}`)
-            h2(class=`${h2Styles}`) Day Planner
-            h3(class=`${h3Styles}`) Plan your day and track the current time
-            a(href=`https://rschm007.github.io/Day-Planner/` target="_blank")
-              img(src=`./assets/imgs/webdevo_gif2.gif` alt=`An animated gif of the Day Planner web app`)
+    body(data-barba="wrapper")
+      include includes/transition
+      main.wrapper(data-barba="container" data-barba-namespace="projects" class=`flex flex-col bg-gradient-to-br from-green-900 via-green-600 to-teal-400 h-auto w-auto p-10`)
+        .page_description(class="flex flex-col")
+          include includes/nav
+          .projects(class="flex flex-wrap mt-20 px-auto")
+            .project(class=`${projectCard}`)
+              h2(class=`${h2Styles}`) Team Template Generator
+              h3(class=`${h3Styles}`) Build a custom team page with this CLI app
+              a(href=`https://github.com/rschm007/Team_Template_Generator` target="_blank")
+                img(src=`./assets/imgs/webdevo_gif4.gif` alt=`An animated gif of the Team Template Generator web app`)
+              a(href=`https://github.com/rschm007/Team_Template_Generator` target="_blank")
+                i(class=`fas fa-code-branch fa-3x m-2 p-2 ${hoverEnlarge}`)
+              a(href=`https://rschm007.github.io/Team_Template_Generator/Develop/output/team.html` target="_blank")
+                i(class=`fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}`)
+            
+            .project(class=`${projectCard}`)
+              h2(class=`${h2Styles}`) Babel
+              h3(class=`${h3Styles}`) Generates recipes from inputted ingredients
+              a(href=`https://https-github-com-steversontong.github.io/Recipe-Generatorf/` target="_blank")
+                img(src=`./assets/imgs/webdevo_gif1.gif` alt=`An animated gif of the Recipe Generator web app`)
+              a(href=`https://https-github-com-steversontong.github.io/Recipe-Generatorf/` target="_blank")
+                i(class=`fas fa-code-branch fa-3x m-2 p-2 ${hoverEnlarge}`)
+              a(href=`https://github.com/https-github-com-steversonTong/Recipe-Generatorf` target="_blank")
+                i(class=`fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}`)
+            
+            .project(class=`${projectCard}`)
+              h2(class=`${h2Styles}`) Day Planner
+              h3(class=`${h3Styles}`) Plan your day and track the current time
               a(href=`https://rschm007.github.io/Day-Planner/` target="_blank")
-                i(class=`fas fa-code-branch fa-3x m-2 p-2 ${hoverEnlarge}`)
-              a(href=`https://github.com/rschm007/Day-Planner` target="_blank")
-                i(class=`fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}`)
-                
-        .projects(class="flex flex-wrap mt-20 px-auto")
-          .project(class=`${projectCard}`)
-            h2(class=`${h2Styles}`) Weather Dashboard
-            h3(class=`${h3Styles}`) Use the OpenWeatherAPI to search forecasts
-            a(href=`https://rschm007.github.io/Weather-Dashboard/` target="_blank")
-              img(src=`./assets/imgs/webdevo_gif3.gif` alt=`An animated gif of the Weather Dashboard web app`)
+                img(src=`./assets/imgs/webdevo_gif2.gif` alt=`An animated gif of the Day Planner web app`)
+                a(href=`https://rschm007.github.io/Day-Planner/` target="_blank")
+                  i(class=`fas fa-code-branch fa-3x m-2 p-2 ${hoverEnlarge}`)
+                a(href=`https://github.com/rschm007/Day-Planner` target="_blank")
+                  i(class=`fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}`)
+                  
+          .projects(class="flex flex-wrap mt-20 px-auto")
+            .project(class=`${projectCard}`)
+              h2(class=`${h2Styles}`) Weather Dashboard
+              h3(class=`${h3Styles}`) Use the OpenWeatherAPI to search forecasts
               a(href=`https://rschm007.github.io/Weather-Dashboard/` target="_blank")
-                i(class=`fas fa-code-branch fa-3x m-2 p-2 ${hoverEnlarge}`)
-              a(href=`https://github.com/rschm007/Weather-Dashboard` target="_blank")
-                i(class=`fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}`)
+                img(src=`./assets/imgs/webdevo_gif3.gif` alt=`An animated gif of the Weather Dashboard web app`)
+                a(href=`https://rschm007.github.io/Weather-Dashboard/` target="_blank")
+                  i(class=`fas fa-code-branch fa-3x m-2 p-2 ${hoverEnlarge}`)
+                a(href=`https://github.com/rschm007/Weather-Dashboard` target="_blank")
+                  i(class=`fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}`)

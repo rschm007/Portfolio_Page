@@ -9,7 +9,6 @@ const nav = `<nav class='flex flex-wrap content-start mt-20 mx-auto'>
 `;
 
 $(document).ready(function () {
-  $(".loader").removeClass("loader--active").addClass("invisible");
   // defining typewrite function
   (function ($) {
     $.fn.typewrite = function (options) {
@@ -59,18 +58,64 @@ $(document).ready(function () {
     },
   });
 
-  // pageRender function that holds animation properties
-  function pageRender(linkVal) {
-    // render page content
-    // setTimeout(function () {
-      location.href = `${linkVal}`;
-    // }, 1500);
+  // define gsap pageTransition animation
+  function pageTransition() {
+    let timeline = gsap.timeline();
+    // this is where the 5 list items come up on the page during the animation
+    timeline.to("ul.transition li", {
+      duration: 0.5,
+      scaleY: 1,
+      transformOrigin: "bottom left",
+      stagger: 0.2
+    });
+    timeline.to("ul.transition li", {
+      duration: 0.5,
+      scaleY: 0,
+      transformOrigin: "bottom left",
+      stagger: 0.1,
+      delay: 0.1
+    });
   }
+
+  // define gsap contentAnimation
+  // this animation will cause DOM objects to fade in from an opacity of 0
+  function contentAnimation() {
+    let timeline = gsap.timeline();
+    timeline.from('.wrapper', { duration: 1, opacity: 0 })
+  }
+
+  // set delay function
+  function delay(n) {
+    n = n || 2000;
+    return new Promise((done) => {
+      setTimeout(() => {
+        done();
+      }, n);
+    });
+  }
+
+  // barba init
+  barba.init({
+    sync: true,
+    transitions: [{
+      async leave(data) {
+        const done = this.async();
+
+        pageTransition();
+        await delay(1500);
+        done();
+      },
+      async enter(data) {
+        contentAnimation();
+      },
+      async once(data) {
+        contentAnimation();
+      }
+    }]
+  })
 
   // nav button logic
   $(document).on("click", ".btn_nav", function () {
-    let linkVal = $(this).attr("id");
-    // render page
-    pageRender(linkVal);
+    pageTransition();
   });
 });
