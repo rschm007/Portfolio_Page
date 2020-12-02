@@ -9,7 +9,9 @@ const nav = `<nav class='flex flex-wrap content-start mt-20 mx-auto'>
 `;
 
 $(document).ready(function () {
-  // defining typewrite function
+  // ====================================================
+  // TYPEWRITER FUNCTION FOR HOMEPAGE
+  // ====================================================
   (function ($) {
     $.fn.typewrite = function (options) {
       const settings = {
@@ -57,7 +59,10 @@ $(document).ready(function () {
       $(".introduction").append(nav);
     },
   });
-
+  // ====================================================
+  // GSAP AND BARBA PAGE TRANSITION ANIMATION PROPERTIES
+  // ====================================================
+  // 
   // define gsap pageTransition animation
   function pageTransition() {
     let timeline = gsap.timeline();
@@ -73,7 +78,7 @@ $(document).ready(function () {
       scaleY: 0,
       transformOrigin: "bottom left",
       stagger: 0.1,
-      delay: 0.1
+      delay: 0.2
     });
   }
 
@@ -81,7 +86,7 @@ $(document).ready(function () {
   // this animation will cause DOM objects to fade in from an opacity of 0
   function contentAnimation() {
     let timeline = gsap.timeline();
-    timeline.from('.wrapper', { duration: 1, opacity: 0 })
+    timeline.from('.wrapper', { duration: 1, opacity: 0, delay: 0.1 })
   }
 
   // set delay function
@@ -113,9 +118,4 @@ $(document).ready(function () {
       }
     }]
   })
-
-  // nav button logic
-  $(document).on("click", ".btn_nav", function () {
-    pageTransition();
-  });
 });
