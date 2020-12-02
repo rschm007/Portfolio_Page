@@ -12,39 +12,15 @@ html(lang='en')
     head
       title Robert Schmahl
       include includes/head
-      style.
-            .resumeAnimation {
-                position: relative;
-                overflow: hidden;
-                width: 25%;
-            }
-            
-            .resumeDwnload {
-                position: fixed;
-                width: 25%;
-                left: -25%;
-                margin-top: 5%;
-                padding-left: 4%;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
-                -webkit-animation: slide 0.5s forwards;
-                -webkit-animation-delay: 2s;
-                animation: slide 0.5s forwards;
-                animation-delay: 2s;
-            }
-            
-            @-webkit-keyframes slide {
-                100% { left: -2%; }
-            }
-
-            @keyframes slide {
-                100% { left: -2%; }
-            }
     body(data-barba="wrapper")
       include includes/transition
       main.wrapper(data-barba="container" data-barba-namespace="skills" class=`flex flex-col bg-gradient-to-br from-orange-700 via-orange-500 to-yellow-400 h-screen w-auto p-10`)
         .page_description(class=`flex flex-col`)
           include includes/nav
-          include includes/resume
+          a(href="../assets/downloads/2020-Resume-RobertSchmahl.pdf" download="2020-Resume-RobertSchmahl.pdf" id="resumeAnimation" class=`resumeDwnload flex flex-wrap resumeLink bg-gray-100 rounded-lg py-5 px-3 ${hoverEnlarge}`)
+              i(class="fa fa-download fa-2x" style="color: Mediumslateblue;")
+              p(class="flex-wrap text-lg text-indigo-800 ml-2") Download my resume
+              span(class="flex items-center text-sm italic text-indigo-800")  &nbsp;(pdf 110kb)
           //- include includes/resume
           .skills(class="flex flex-wrap mt-20 ml-32 mr-32")
             .skillCard(class=`${skillsCardStyles}`)
