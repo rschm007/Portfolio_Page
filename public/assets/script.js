@@ -1,10 +1,10 @@
 // defining a nav constant to append after typewriter function
 const nav = `<nav class='flex flex-wrap content-start mt-20 mx-auto'>
- <button id="home" class="btn_nav text-xl mx-5 px-4 py-3 rounded-lg active" type="button">Home</button>
- <button id="projects" class="btn_nav text-xl mx-5 px-4 py-3 rounded-lg" type="button">Projects</button>
- <button id="skills" class="btn_nav text-xl mx-5 px-4 py-3 rounded-lg" type="button">Skills</button>
- <button id="about" class="btn_nav text-xl mx-5 px-4 py-3 rounded-lg" type="button">About</button>
- <button id="contact" class="btn_nav text-xl mx-5 px-4 py-3 rounded-lg" type="button">Contact</button>
+ <a href="home" class="btn_nav text-xl mx-5 px-4 py-3 rounded-lg active" type="button">Home</a>
+ <a href="projects" class="btn_nav text-xl mx-5 px-4 py-3 rounded-lg" type="button">Projects</a>
+ <a href="skills" class="btn_nav text-xl mx-5 px-4 py-3 rounded-lg" type="button">Skills</a>
+ <a href="about" class="btn_nav text-xl mx-5 px-4 py-3 rounded-lg" type="button">About</a>
+ <a href="contact" class="btn_nav text-xl mx-5 px-4 py-3 rounded-lg" type="button">Contact</a>
 </nav>
 `;
 
