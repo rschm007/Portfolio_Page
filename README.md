@@ -13,7 +13,7 @@ Repository <a href="https://github.com/rschm007/Portfolio_Page">https://github.c
 Installation
 -----------------------------
 
-To install this application you will need a text editor like Visual Studio Code. There are several NPM packages which need to install with "npm install" in your CLI. These include barba, express, gsap, path, and tailwindcss, and pug. You will also need to install or configure the Tailwindcss framework (https://tailwindcss.com/), PUG HTML compiler (https://pugjs.org/api/getting-started.html), and Sass CSS compiler (https://sass-lang.com/).
+To install this application you will need a text editor like Visual Studio Code. There are several NPM packages which need to install with "npm install" in your CLI. These include barba, express, gsap, path, tailwindcss, and pug. You will also need to install or configure the Tailwindcss framework (https://tailwindcss.com/), PUG HTML compiler (https://pugjs.org/api/getting-started.html), and Sass CSS compiler (https://sass-lang.com/).
 
 
 Features
