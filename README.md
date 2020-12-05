@@ -18,7 +18,7 @@ To install this application you will need a text editor like Visual Studio Code.
 
 Features
 -----------------------------
-This site was developed with Tailwindcss, Pug and Sass. It incorporates flexbox to create a responsive layout. Items that would normally display in multiple columns should display as a single column on smaller screens.
+This site was developed with Tailwindcss, Pug and Sass. Barba and GSAP were used for the animations. This site incorporates flexbox to create a responsive layout. Items that would normally display in multiple columns should display as a single column on smaller screens.
 
 Other features include:
 <ul>
