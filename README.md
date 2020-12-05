@@ -54,7 +54,6 @@ Acknowledgements
 -----------------------------
 <ul>
   <li>UC Irvine Web Development program for providing project requirements and code examples</li>
-  <li>Wilmai at codepen.io for this awesome page render animation: <a href="https://codepen.io/wilmai/pen/MvejPb">https://codepen.io/wilmai/pen/MvejPb</a></li>
   <li>Chad Selph for the jQuery typewriter I forked: <a href="https://github.com/chadselph/jquery-typewriter">https://github.com/chadselph/jquery-typewriter</a></li>
 </ul>
 
