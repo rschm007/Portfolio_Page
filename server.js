@@ -7,7 +7,7 @@ const express = require("express");
 const app = express();
 
 // Sets an initial port. We"ll use this later in our listener
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 
 // render static files
 app.use(express.static("public"));
@@ -21,9 +21,9 @@ app.get("/", function (req, res) {
   res.render("index");
 });
 
-// index route
+// home route
 app.get("/home", function (req, res) {
-  res.render("index");
+  res.render("home");
 });
 
 // about route
@@ -44,6 +44,11 @@ app.get("/projects", function (req, res) {
 // about route
 app.get("/skills", function (req, res) {
   res.render("skills");
+});
+
+// default route
+app.get("*", function (req, res) {
+  res.render("home");
 });
 
 // start server listening
