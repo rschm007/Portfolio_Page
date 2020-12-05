@@ -36,8 +36,8 @@ Planned Future Features
 -----------------------------
 <ul>
   <li>Enhanced mobile responsiveness & media queries</li>
-  <li>Links to more technical projects as well as graphic design projects</li>
-  <li>Tidy up animation functions</li>
+  <li>Links to more technical projects</li>
+  <li><strike>Tidy up animation functions</strike></li>
   <li>About Me needs copy editing, as it ends rather weakly right now</li>
   <li><strike>Current resume is one of my outdated marketing-specific resumes. This needs to be changed.</strike> Accomplished 11/28/2020</li>
   <li>Migrate contact form from Google Forms to custom form</li>
