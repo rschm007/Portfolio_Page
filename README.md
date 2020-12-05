@@ -20,8 +20,6 @@ Features
 -----------------------------
 This site was developed with Tailwindcss, Pug and Sass. It incorporates flexbox to create a responsive layout. Items that would normally display in multiple columns should display as a single column on smaller screens.
 
-<img src="https://raw.githubusercontent.com/rschm007/Portfolio_Page/master/assets/imgs/portfolio_gif-1.gif" alt="Robert Schmahl Portfolio gif" style="max-width:100%;">
-
 Other features include:
 <ul>
   <li>Navbar links to navigate between content pages</li>
