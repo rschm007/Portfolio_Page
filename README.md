@@ -6,7 +6,7 @@ Check out the badges hosted by [shields.io](https://shields.io/).
 
 Links
 -----------------------------
-Deployed <a href="https://morning-shelf-13203.herokuapp.com/index.html">https://morning-shelf-13203.herokuapp.com/index.html</a>
+Deployed <a href="http://www.robertschmahl.com/">http://www.robertschmahl.com/</a>
 <br>
 Repository <a href="https://github.com/rschm007/Portfolio_Page">https://github.com/rschm007/Portfolio_Page</a>
 
