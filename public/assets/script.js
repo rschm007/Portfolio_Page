@@ -1,5 +1,5 @@
 // defining a nav constant to append after typewriter function
-const nav = `<nav class='flex flex-wrap content-start mt-20 mx-auto'>
+const nav = `<nav class='desktop flex flex-wrap content-start mt-20 mx-auto'>
  <a href="home" class="btn_nav text-xl mx-5 px-4 py-3 rounded-lg active" type="button">Home</a>
  <a href="projects" class="btn_nav text-xl mx-5 px-4 py-3 rounded-lg" type="button">Projects</a>
  <a href="skills" class="btn_nav text-xl mx-5 px-4 py-3 rounded-lg" type="button">Skills</a>
@@ -62,7 +62,7 @@ $(document).ready(function () {
   // ====================================================
   // GSAP AND BARBA PAGE TRANSITION ANIMATION PROPERTIES
   // ====================================================
-  // 
+  //
   // define gsap pageTransition animation
   function pageTransition() {
     let timeline = gsap.timeline();
@@ -71,14 +71,14 @@ $(document).ready(function () {
       duration: 0.5,
       scaleY: 1,
       transformOrigin: "bottom left",
-      stagger: 0.2
+      stagger: 0.2,
     });
     timeline.to("ul.transition li", {
       duration: 0.5,
       scaleY: 0,
       transformOrigin: "bottom left",
       stagger: 0.1,
-      delay: 0.2
+      delay: 0.2,
     });
   }
 
@@ -86,7 +86,7 @@ $(document).ready(function () {
   // this animation will cause DOM objects to fade in from an opacity of 0
   function contentAnimation() {
     let timeline = gsap.timeline();
-    timeline.from('.wrapper', { duration: 1, opacity: 0, delay: 0.1 })
+    timeline.from(".wrapper", { duration: 1, opacity: 0, delay: 0.1 });
   }
 
   // set delay function
@@ -102,20 +102,22 @@ $(document).ready(function () {
   // barba init
   barba.init({
     sync: true,
-    transitions: [{
-      async leave(data) {
-        const done = this.async();
+    transitions: [
+      {
+        async leave(data) {
+          const done = this.async();
 
-        pageTransition();
-        await delay(1500);
-        done();
+          pageTransition();
+          await delay(1500);
+          done();
+        },
+        async enter(data) {
+          contentAnimation();
+        },
+        async once(data) {
+          contentAnimation();
+        },
       },
-      async enter(data) {
-        contentAnimation();
-      },
-      async once(data) {
-        contentAnimation();
-      }
-    }]
-  })
+    ],
+  });
 });

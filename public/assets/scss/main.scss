@@ -10,6 +10,114 @@ nav {
 }
 
 // ====================================================
+// styles for mobile nav menu
+// ====================================================
+#overlay {
+  height: 100vh;
+  width: 100vw;
+  background: #ec6451;
+  z-index: 2;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  &.active {
+    visibility: visible;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    padding-left: 0;
+    list-style-type: none;
+    li {
+      padding: 1em;
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5em;
+        &:hover {
+          color: #333332;
+        }
+      }
+    }
+  }
+}
+
+// overlay button styles for mobile nav menu
+#overlay-button {
+  position: absolute;
+  right: 2em;
+  top: 3em;
+  padding: 26px 11px;
+  z-index: 5;
+  cursor: pointer;
+  user-select: none;
+  span {
+    height: 4px;
+    width: 35px;
+    border-radius: 2px;
+    background-color: white;
+    position: relative;
+    display: block;
+    transition: all 0.2s ease-in-out;
+    &:before {
+      top: -10px;
+      visibility: visible;
+    }
+    &:after {
+      top: 10px;
+    }
+    &:before,
+    &:after {
+      height: 4px;
+      width: 35px;
+      border-radius: 2px;
+      background-color: white;
+      position: absolute;
+      content: "";
+      transition: all 0.2s ease-in-out;
+    }
+  }
+  &:hover span,
+  &:hover span:before,
+  &:hover span:after {
+    background: #333332;
+  }
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+// when button is checked show the nav menu
+input[type="checkbox"]:checked ~ #overlay {
+  visibility: visible;
+}
+
+// when button is checked perform animation on button
+input[type="checkbox"]:checked ~ #overlay-button {
+  &:hover span,
+  span {
+    background: transparent;
+  }
+  span {
+    &:before {
+      transform: rotate(45deg) translate(7px, 7px);
+      opacity: 1;
+    }
+    &:after {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+  }
+}
+
+// ====================================================
 // styles for transition animation
 // ====================================================
 ul.transition {
@@ -94,22 +202,44 @@ ul.transition li {
 }
 
 @-webkit-keyframes slide {
-  100% { left: -2%; }
+  100% {
+    left: -2%;
+  }
 }
 
 @keyframes slide {
-  100% { left: -2%; }
+  100% {
+    left: -2%;
+  }
 }
 
 // ====================================================
 // media queries
 // ====================================================
-@media (max-width: 650px) {
+// desktop
+@media (min-width: 751px) {
+  #overlay {
+    visibility: hidden;
+    display: none;
+  }
+
+  #overlay-button {
+    visibility: visible;
+    display: none;
+  }
+}
+
+// mobile
+@media (max-width: 750px) {
   main {
     display: flex;
     margin-top: 3em;
     position: relative;
     z-index: 3;
+  }
+  .introduction {
+    margin-top: 40%;
+    font-size: 250%;
   }
   .wrapper {
     max-width: 950px;
@@ -117,5 +247,19 @@ ul.transition li {
   }
   img {
     width: 400px;
+  }
+  // if mobile screen, hide the large nav
+  .desktop {
+    display: none;
+  }
+
+  #overlay {
+    visibility: hidden;
+    display: block;
+  }
+
+  #overlay-button {
+    visibility: visible;
+    display: block;
   }
 }
