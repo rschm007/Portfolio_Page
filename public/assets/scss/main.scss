@@ -307,7 +307,16 @@ ul.transition li {
   }
 
 // **** Media queries for contact page
+  iframe {
+    position: relative;
+    top: 5rem;
+  }
 
-
+  .contactButtons {
+    position: relative;
+    left: 20%;
+    right: 20%;
+    top: 7rem;
+  }
 }
 
