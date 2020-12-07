@@ -1,4 +1,3 @@
-@import "./pageRender";
 @import "./buttonStyles";
 
 dt {
@@ -237,14 +236,22 @@ ul.transition li {
     position: relative;
     z-index: 3;
   }
+  
+  // homepage introduction div
   .introduction {
     margin-top: 40%;
     font-size: 250%;
   }
+
+  // wrappers on every page 
   .wrapper {
+    position: static;
     max-width: 950px;
-    margin: 0 auto;
+    height: 100%;
+    margin: 0;
   }
+
+  // imgs on every page
   img {
     width: 400px;
   }
@@ -262,4 +269,45 @@ ul.transition li {
     visibility: visible;
     display: block;
   }
+
+// **** Media queries for projects page
+  .project {
+    width: auto;
+    height: auto;
+    margin-top: 1rem;
+  }
+
+// **** Media queries for skills page
+  .skillCard {
+    width: auto;
+    height: auto;
+    padding: 1.5rem;
+    margin-top: 1rem;
+  }
+
+// **** Media queries for resume download animation
+  .resumeDownload {
+    width: auto;
+  }
+
+// **** Media queries for about page
+  .aboutHeader {
+    position: relative;
+    top: 3rem;
+  }
+
+  .bg-local {
+    margin-left: -40%;
+  }
+
+  .aboutContent {
+    position: relative;
+    width: 80%;
+    top: 4rem;
+  }
+
+// **** Media queries for contact page
+
+
 }
+
