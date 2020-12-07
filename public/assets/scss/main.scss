@@ -236,14 +236,14 @@ ul.transition li {
     position: relative;
     z-index: 3;
   }
-  
+
   // homepage introduction div
   .introduction {
     margin-top: 40%;
     font-size: 250%;
   }
 
-  // wrappers on every page 
+  // wrappers on every page
   .wrapper {
     position: static;
     max-width: 950px;
@@ -270,27 +270,32 @@ ul.transition li {
     display: block;
   }
 
-// **** Media queries for projects page
+  // **** Media queries for projects page
   .project {
     width: auto;
     height: auto;
     margin-top: 1rem;
   }
 
-// **** Media queries for skills page
+  // **** Media queries for skills page
+
   .skillCard {
-    width: auto;
+    width: 40rem;
     height: auto;
     padding: 1.5rem;
     margin-top: 1rem;
   }
 
-// **** Media queries for resume download animation
-  .resumeDownload {
+  // **** Media queries for resume download animation
+  .resumeDwnload {
     width: auto;
   }
 
-// **** Media queries for about page
+  // **** Media queries for about page
+  .aboutBG {
+    height: 60rem;
+  }
+
   .aboutHeader {
     position: relative;
     top: 3rem;
@@ -306,7 +311,7 @@ ul.transition li {
     top: 4rem;
   }
 
-// **** Media queries for contact page
+  // **** Media queries for contact page
   iframe {
     position: relative;
     top: 5rem;
@@ -319,4 +324,3 @@ ul.transition li {
     top: 7rem;
   }
 }
-

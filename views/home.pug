@@ -5,9 +5,10 @@ html(lang='en')
     head
       title Robert Schmahl
       include includes/head
+      style(type="text/css").
     body(data-barba="wrapper")
       include includes/transition
-      main.wrapper(data-barba="container" data-barba-namespace="home" class="flex flex-col bg-gradient-to-br from-indigo-900 via-blue-700 to-blue-500 h-screen w-screen")
+      main.wrapperHome(data-barba="container" data-barba-namespace="home" class="flex flex-col bg-gradient-to-br from-indigo-900 via-blue-700 to-blue-500 h-screen w-screen")
         include includes/mobileMenu
         div.introduction(class="page_description flex flex-col text-center gap-10 text-white")
           h1(class="flex-initial px-10 font-medium text-4xl") Hi, my name is Robert.
