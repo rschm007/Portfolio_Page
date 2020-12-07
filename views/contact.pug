@@ -13,11 +13,11 @@ html(lang='en')
       include includes/head
     body(data-barba="wrapper")
       include includes/transition
-      main.wrapper(data-barba="container" data-barba-namespace="contact" class=`flex flex-col bg-gradient-to-br from-purple-800 via-indigo-700 to-indigo-400 h-auto w-auto p-10`)
+      main.wrapper(data-barba="container" data-barba-namespace="contact" class=`contactBG flex flex-col bg-gradient-to-br from-purple-800 via-indigo-700 to-indigo-400 h-auto w-auto p-10`)
         .page_description(class="flex flex-col")
           include includes/nav
           include includes/mobileMenu
-          .wrapper(class="flex flex-wrap mt-20 mx-auto px-auto")
+          div(class="contactContents flex flex-wrap mt-20 mx-auto px-auto")
             iframe(src="https://docs.google.com/forms/d/e/1FAIpQLSdPRB1YR4bfALbPptVAUAsYcGRWLpsgmQ_AsvHbNk6xTerFbg/viewform?embedded=true" class="flex-initial bg-gray-100 rounded-lg shadow-lg" width="520" scrolling="no" height="720" frameborder="0" marginheight="0" marginwidth="0") Loading...
             .contactButtons(class="flex-initial ml-10")
               a(href="../assets/downloads/2020-Resume-RobertSchmahl.pdf" download="2020-Resume-RobertSchmahl.pdf" class=`flex flex-wrap resumeLink bg-gray-100 rounded-lg py-5 px-3 ${hoverEnlarge}`)

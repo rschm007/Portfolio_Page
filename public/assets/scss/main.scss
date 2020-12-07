@@ -232,7 +232,6 @@ ul.transition li {
 @media (max-width: 750px) {
   main {
     display: flex;
-    margin-top: 3em;
     position: relative;
     z-index: 3;
   }
@@ -286,9 +285,26 @@ ul.transition li {
     margin-top: 1rem;
   }
 
+  .skills {
+    position: relative;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    z-index: 0;
+  }
+
   // **** Media queries for resume download animation
   .resumeDwnload {
+    position: fixed;
     width: auto;
+    left: -60%;
+    margin-top: 5%;
+    padding-left: 4%;
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 1s;
+    animation: slide 0.5s forwards;
+    animation-delay: 1s;
   }
 
   // **** Media queries for about page
@@ -302,7 +318,8 @@ ul.transition li {
   }
 
   .bg-local {
-    margin-left: -40%;
+    left: auto;
+    right: -5%;
   }
 
   .aboutContent {
@@ -312,6 +329,11 @@ ul.transition li {
   }
 
   // **** Media queries for contact page
+
+  .contactBG {
+    height: 75rem;
+  }
+
   iframe {
     position: relative;
     top: 5rem;
@@ -321,6 +343,10 @@ ul.transition li {
     position: relative;
     left: 20%;
     right: 20%;
-    top: 7rem;
+    top: 8rem;
+  }
+
+  .contactContents {
+    top: auto;
   }
 }
