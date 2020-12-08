@@ -317,7 +317,7 @@ ul.transition li {
 
   // mobile nav menu
   #overlay ul {
-    font-size: 8vw;
+    font-size: 5vw;
   }
 
   // homepage introduction div
@@ -404,6 +404,10 @@ ul.transition li {
     top: 3rem;
   }
 
+  .aboutEmphasis {
+    font-size: 3rem;
+  }
+
   .bg-local {
     visibility: hidden;
   }
@@ -412,6 +416,8 @@ ul.transition li {
     position: relative;
     width: 80%;
     top: 4rem;
+    padding: 2rem;
+
   }
 
   // **** Media queries for contact page
@@ -423,7 +429,7 @@ ul.transition li {
   iframe {
     position: relative;
     top: 5rem;
-    width: 70vw;
+    width: 90vw;
   }
 
   .contactButtons {
