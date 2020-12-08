@@ -33,7 +33,7 @@ Other features include:
 Planned Future Features
 -----------------------------
 <ul>
-  <li>Enhanced mobile responsiveness & media queries</li>
+  <li><strike>Enhanced mobile responsiveness & media queries</strike>  Accomplished 12/7/2020</li>
   <li>Links to more technical projects</li>
   <li><strike>Tidy up animation functions</strike> Accomplished 12/5/2020</li>
   <li>About Me needs copy editing, as it ends rather weakly right now</li>
