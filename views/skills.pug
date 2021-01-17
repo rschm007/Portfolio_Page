@@ -14,7 +14,7 @@ html(lang='en')
       include includes/head
     body(data-barba="wrapper")
       include includes/transition
-      main.wrapper(data-barba="container" data-barba-namespace="skills" class=`flex flex-col bg-gradient-to-br from-orange-700 via-orange-500 to-yellow-400 h-screen w-auto p-10`)
+      main.wrapper(data-barba="container" data-barba-namespace="skills" class=`flex flex-col bg-gradient-to-br from-orange-700 via-orange-500 to-yellow-400 h-auto w-auto p-10`)
         .page_description(class=`flex flex-col`)
           include includes/nav
           include includes/mobileMenu
@@ -37,6 +37,7 @@ html(lang='en')
                 dt  Tailwindcss
                 dt  Node
                 dt  mySQL
+                dt  MongoDB
                 dt  Visual Studio Code
                 dt  Github
             .skillCard(class=`${skillsCardStyles}`)
