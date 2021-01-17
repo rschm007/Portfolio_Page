@@ -1,9 +1,34 @@
 //- define styles for this page
-- const projectCard = `text-center bg-gray-100 mx-auto rounded-lg`;
-- const h2Styles = `text-2xl font-bold mt-4 p-2`;
-- const h3Styles = `font-normal p-2 mb-4`;
+- const projectCard = `flex flex-col text-center bg-gray-100 mr-5 mb-5 rounded-md`;
+- const h2Styles = `text-3xl font-bold uppercase leading-10 my-4 p-2`;
+- const pStyles = `text-sm p-6 mb-4 leading-normal`;
 - const hoverEnlarge = `transition duration-500 ease-in-out hover:text-red-600 transform hover:-translate-y-1 hover:scale-110`;
 - const projectActive = `active`;
+- const headerStyles = `bg-purple-700 shadow-sm p-2 text-white`;
+- const shieldsioStyles = `flex flex-wrap justify-between bg-gray-400`;
+
+//- markdown badge icons
+- const HTML5Badge = `img alt="HTML5" src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"`;
+- const CSS3Badge = `img alt="CSS3" src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"`;
+- const JavaScriptBadge = `img alt="JavaScript" src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"`;
+- const TailwindCSSBadge = `img alt="TailwindCSS" src="https://img.shields.io/badge/tailwindcss%20-%2338B2AC.svg?&style=for-the-badge&logo=tailwind-css&logoColor=white"`;
+- const BootstrapBadge = `img alt="Bootstrap" src="https://img.shields.io/badge/bootstrap%20-%23563D7C.svg?&style=for-the-badge&logo=bootstrap&logoColor=white"`;
+- const jQueryBadge = `img alt="jQuery" src="https://img.shields.io/badge/jquery%20-%230769AD.svg?&style=for-the-badge&logo=jquery&logoColor=white"`;
+- const SassBadge = `img alt="SASS" src="https://img.shields.io/badge/SASS%20-hotpink.svg?&style=for-the-badge&logo=SASS&logoColor=white"`;
+- const herokuBadge = `img alt="Heroku" src="https://img.shields.io/badge/heroku%20-%23430098.svg?&style=for-the-badge&logo=heroku&logoColor=white"`;
+- const mySQLBadge = `img alt="MySQL" src="https://img.shields.io/badge/mysql-%2300f.svg?&style=for-the-badge&logo=mysql&logoColor=white"`;
+- const mongoDBBadge = `img img alt="MongoDB" src ="https://img.shields.io/badge/MongoDB-%234ea94b.svg?&style=for-the-badge&logo=mongodb&logoColor=white"`;
+- const travisBadge = `img alt="TravisCI" src="https://img.shields.io/badge/travisci%20-%232B2F33.svg?&style=for-the-badge&logo=travis&logoColor=white"`;
+- const pugBadge = `img alt="Pug" src="https://img.shields.io/badge/pug%20-%23a86454.svg?&style=for-the-badge&logo=pug&logoColor=white"`;
+- const socketIO = `img alt="Socketio" src="https://img.shields.io/badge/socketio%20-%23ffffff.svg?&style=for-the-badge&logo=socketio&logoColor=white"`;
+- const nodeJSbadge = `img alt="NodeJS" src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"`;
+- const expressBadge = `img alt="Express.js" src="https://img.shields.io/badge/express.js%20-%23404d59.svg?&style=for-the-badge"`;
+- const sequelizeBadge = `img alt="Sequelize" src="https://img.shields.io/badge/sequelize%20-%23399af3.svg?&style=for-the-badge&logo=sequelize&logoColor=white"`;
+- const handlebarsBadge = `img alt="Handlebars.js" src="https://img.shields.io/badge/handlebars.js%20-%23e61.svg?&style=for-the-badge&logo=handlebars.js&logoColor=white"`;
+- const jestBadge = `img alt="Jest" src="https://img.shields.io/badge/jest%20-%2315C213.svg?&style=for-the-badge&logo=jest&logoColor=white"`;
+
+//- code for custom badges
+//- <img alt="" src="https://img.shields.io/badge/<badge>%20-%23<badge-color>.svg?&style=for-the-badge&logo=<badge>&logoColor=<logo-color>" alt="Badge Name"/>
 
 doctype html
 html(lang='en')
@@ -16,44 +41,107 @@ html(lang='en')
         .page_description(class="flex flex-col")
           include includes/nav
           include includes/mobileMenu
-          .projects(class="flex flex-wrap mt-20 px-auto")
-            .project(class=`${projectCard}`)
-              h2(class=`${h2Styles}`) Team Template Generator
-              h3(class=`${h3Styles}`) Build a custom team page with this CLI app
-              a(href=`https://github.com/rschm007/Team_Template_Generator` target="_blank")
-                img(src=`./assets/imgs/webdevo_gif4.gif` alt=`An animated gif of the Team Template Generator web app`)
-              a(href=`https://rschm007.github.io/Team_Template_Generator/output/team.html` target="_blank")
-                i(class=`fas fa-code-branch fa-3x m-2 p-2 ${hoverEnlarge}`)
-              a(href=`https://github.com/rschm007/Team_Template_Generator` target="_blank")
-                i(class=`fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}`)
-            
-            .project(class=`${projectCard}`)
-              h2(class=`${h2Styles}`) Babel
-              h3(class=`${h3Styles}`) Generates recipes from inputted ingredients
-              a(href=`https://https-github-com-steversontong.github.io/Recipe-Generatorf/` target="_blank")
-                img(src=`./assets/imgs/webdevo_gif1.gif` alt=`An animated gif of the Recipe Generator web app`)
-              a(href=`https://https-github-com-steversontong.github.io/Recipe-Generatorf/` target="_blank")
-                i(class=`fas fa-code-branch fa-3x m-2 p-2 ${hoverEnlarge}`)
-              a(href=`https://github.com/https-github-com-steversonTong/Recipe-Generatorf` target="_blank")
-                i(class=`fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}`)
-            
-            .project(class=`${projectCard}`)
-              h2(class=`${h2Styles}`) Day Planner
-              h3(class=`${h3Styles}`) Plan your day and track the current time
-              a(href=`https://rschm007.github.io/Day-Planner/` target="_blank")
-                img(src=`./assets/imgs/webdevo_gif2.gif` alt=`An animated gif of the Day Planner web app`)
-                a(href=`https://rschm007.github.io/Day-Planner/` target="_blank")
-                  i(class=`fas fa-code-branch fa-3x m-2 p-2 ${hoverEnlarge}`)
-                a(href=`https://github.com/rschm007/Day-Planner` target="_blank")
-                  i(class=`fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}`)
+          .projects(class="flex flex-wrap justify-between mt-20 mx-20")
+              .project(class=`${projectCard}`)
+                .header(class=`${headerStyles}`)
+                  h2(class=`${h2Styles}`) BABELbox
+                .shieldsio(class=`${shieldsioStyles}`)
+                  #{HTML5Badge}
+                  #{CSS3Badge}
+                  #{JavaScriptBadge}
+                  #{TailwindCSSBadge}
+                  #{jQueryBadge}
+                  #{handlebarsBadge}
+                  #{herokuBadge}
+                  #{mySQLBadge}
+                  #{nodeJSbadge}
+                  #{expressBadge}
+                  #{sequelizeBadge}
+                  #{travisBadge}
+                p(class=`${pStyles}`) BABELbox is a collection of fun games that the BABEL team is actively cultivating. This is a full stack application that follows the MVC paradigm in its architectural structure.
+                a(href=`http://babelbox.herokuapp.com/` target="_blank")
+                  img(src=`./assets/imgs/Babelbox.png` alt=`A screenshot of the BABELbox app`)
+                .icons(class="flex-row justify-end")                
+                  a(href=`http://babelbox.herokuapp.com/` target="_blank")
+                    i(class=`fas fa-code-branch fa-3x m-2 p-2 ${hoverEnlarge}`)
+                  a(href=`https://github.com/https-github-com-steversonTong/BabelBox` target="_blank")
+                    i(class=`fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}`)
+              
+              .project(class=`${projectCard}`)
+                .header(class=`${headerStyles}`)
+                  h2(class=`${h2Styles}`) BABEL Recipe Generator
+                .shieldsio(class=`${shieldsioStyles}`)
+                  #{HTML5Badge}
+                  #{CSS3Badge}
+                  #{JavaScriptBadge}
+                  #{TailwindCSSBadge}
+                  #{jQueryBadge}
+                  #{nodeJSbadge}
+                p(class=`${pStyles}`) A web app that allows users to choose ingredients to generate recipes. Recipes are called from the Edamame API and prioritized based off of how many user-chosen ingredients they contain.
+                a(href=`https://https-github-com-steversontong.github.io/Recipe-Generatorf/` target="_blank")
+                  img(src=`./assets/imgs/webdevo_gif1.gif` alt=`An animated gif of the Recipe Generator web app`)
+                .icons(class="flex-row")                
+                  a(href=`https://https-github-com-steversontong.github.io/Recipe-Generatorf/` target="_blank")
+                    i(class=`fas fa-code-branch fa-3x m-2 p-2 ${hoverEnlarge}`)
+                  a(href=`https://github.com/https-github-com-steversonTong/Recipe-Generatorf` target="_blank")
+                    i(class=`fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}`)
+              
+              .project(class=`${projectCard}`)
+                .header(class=`${headerStyles}`)
+                  h2(class=`${h2Styles}`) MVC Tech Blog
+                .shieldsio(class=`${shieldsioStyles}`)
+                  #{HTML5Badge}
+                  #{CSS3Badge}
+                  #{JavaScriptBadge}
+                  #{BootstrapBadge}
+                  #{handlebarsBadge}
+                  #{herokuBadge}
+                  #{mySQLBadge}
+                  #{sequelizeBadge}
+                  #{nodeJSbadge}
+                  #{expressBadge}
+                p(class=`${pStyles}`) A CMS-style blog site similar to a Wordpress site where developers can publish their blog posts and comment on other developer's blog posts as well. The app follows the MVC paradigm in its architectural structure.
+                a(href=`https://fathomless-reef-78577.herokuapp.com/` target="_blank")
+                  img(src=`./assets/imgs/MVCTechBlog_gif.gif` alt=`An animated gif of the MVC Tech Blog web app`)
+                .icons(class="flex-row")                  
+                    a(href=`https://fathomless-reef-78577.herokuapp.com/` target="_blank")
+                      i(class=`fas fa-code-branch fa-3x m-2 p-2 ${hoverEnlarge}`)
+                    a(href=`https://github.com/rschm007/Tech_Blog` target="_blank")
+                      i(class=`fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}`)
                   
-          .projects(class="flex flex-wrap mt-20 px-auto")
-            .project(class=`${projectCard}`)
-              h2(class=`${h2Styles}`) Weather Dashboard
-              h3(class=`${h3Styles}`) Use the OpenWeatherAPI to search forecasts
-              a(href=`https://rschm007.github.io/Weather-Dashboard/` target="_blank")
-                img(src=`./assets/imgs/webdevo_gif3.gif` alt=`An animated gif of the Weather Dashboard web app`)
-                a(href=`https://rschm007.github.io/Weather-Dashboard/` target="_blank")
-                  i(class=`fas fa-code-branch fa-3x m-2 p-2 ${hoverEnlarge}`)
-                a(href=`https://github.com/rschm007/Weather-Dashboard` target="_blank")
-                  i(class=`fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}`)
+            
+              .project(class=`${projectCard}`)
+                .header(class=`${headerStyles}`)
+                  h2(class=`${h2Styles}`) Team Template Generator
+                .shieldsio(class=`${shieldsioStyles}`)
+                  #{HTML5Badge}
+                  #{CSS3Badge}
+                  #{JavaScriptBadge}
+                  #{TailwindCSSBadge}
+                  #{nodeJSbadge}
+                  #{jestBadge}
+                p(class=`${pStyles}`) A CLI application that prompts the user for information about the team manager and then the team members. After going through inquirer prompts (and passing the validation tests), the app will create a HTML file that dynamically inserts each team member's information into cards.
+                a(href=`https://github.com/rschm007/Team_Template_Generator` target="_blank")
+                  img(src=`./assets/imgs/webdevo_gif4.gif` alt=`An animated gif of the Team Template Generator web app`)
+                .icons(class="flex-row")                
+                  a(href=`https://rschm007.github.io/Team_Template_Generator/output/team.html` target="_blank")
+                    i(class=`fas fa-code-branch fa-3x m-2 p-2 ${hoverEnlarge}`)
+                  a(href=`https://github.com/rschm007/Team_Template_Generator` target="_blank")
+                    i(class=`fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}`)
+
+              .project(class=`${projectCard}`)
+                .header(class=`${headerStyles}`)
+                  h2(class=`${h2Styles}`) E-Commerce Back End
+                .shieldsio(class=`${shieldsioStyles}`)
+                  #{HTML5Badge}
+                  #{JavaScriptBadge}
+                  #{mySQLBadge}
+                  #{nodeJSbadge}
+                  #{expressBadge}
+                  #{sequelizeBadge}
+                p(class=`${pStyles}`) A working Express.js API connected to a MySQL database that allows POST, GET, DELETE, and PUT requests.
+                .icons(class="flex-row")                
+                  a(href=`https://github.com/rschm007/Team_Template_Generator` target="_blank")
+                    img(src=`./assets/imgs/ECommereBackEnd_gif.gif` alt=`An animated gif of the E-Commerce app`)
+                  a(href=`https://github.com/rschm007/E-Commerce_Back_End` target="_blank")
+                    i(class=`fab fa-github-square fa-3x m-2 p-2 ${hoverEnlarge}`)
